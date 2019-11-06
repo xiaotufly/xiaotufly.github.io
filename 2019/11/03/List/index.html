@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>List - xiaotufly</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="双链表1.为什么要用链表大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。 增加： 12345678void Add(int value, int index, int size)&amp;#123;	for(int i = index, i &amp;lt;= size; i++)	&amp;#123;		a[i+1] = a[i];	&amp;#125;	a[index] = v">
+<meta name="keywords" content="data structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="List">
+<meta property="og:url" content="http://yoursite.com/2019/11/03/List/index.html">
+<meta property="og:site_name" content="xiaotufly">
+<meta property="og:description" content="双链表1.为什么要用链表大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。 增加： 12345678void Add(int value, int index, int size)&amp;#123;	for(int i = index, i &amp;lt;= size; i++)	&amp;#123;		a[i+1] = a[i];	&amp;#125;	a[index] = v">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/images/2019.11.6.jpg">
+<meta property="og:updated_time" content="2019-11-06T15:16:16.177Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="List">
+<meta name="twitter:description" content="双链表1.为什么要用链表大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。 增加： 12345678void Add(int value, int index, int size)&amp;#123;	for(int i = index, i &amp;lt;= size; i++)	&amp;#123;		a[i+1] = a[i];	&amp;#125;	a[index] = v">
+<meta name="twitter:image" content="http://yoursite.com/images/2019.11.6.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/w.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/w.png" alt="List" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">主页</a>
+                
+                <a class="navbar-item" href="/archives">文章</a>
+                
+                <a class="navbar-item" href="/categories">分类</a>
+                
+                <a class="navbar-item" href="/tags">标签</a>
+                
+                <a class="navbar-item" href="/about">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/code/">code</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 分钟 读完 (大约 1354 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                List
+            
+        </h1>
+        <div class="content">
+            <h1 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h1><h5 id="1-为什么要用链表"><a href="#1-为什么要用链表" class="headerlink" title="1.为什么要用链表"></a>1.为什么要用链表</h5><p>大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。</p>
+<p>增加：</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> size)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = index, i &lt;= size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i+<span class="hljs-number">1</span>] = a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	a[index] = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>删减：</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> size)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = index, i &lt;= size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i] = a[i+<span class="hljs-number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样的时间复杂度会很高，也十分麻烦，需要遍历一遍才能完成操作，而链表可以之前在中间插入、删除。</p>
+<a id="more"></a>
+
+<h5 id="2-双链表模型"><a href="#2-双链表模型" class="headerlink" title="2.双链表模型"></a>2.双链表模型</h5><p>一般来说，链表有“head”与“tail”，头与尾的中间用来存储数据，每个节点都有两个指针，指向节点的前后。</p>
+<p>next：后指针，代表这个节点的下一个节点。</p>
+<p>pre：前指针，代表这个节点的上一个节点。</p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/e1c25043234b7f7c.png" alt></p>
+<h5 id="3-创建"><a href="#3-创建" class="headerlink" title="3.创建"></a>3.创建</h5><p>双链表需要一个data数据、前指针和后指针，我们使用结构体将它们封装起来。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">list</span></span></span><br><span class="line"><span class="hljs-class">&#123;</span></span><br><span class="line">	<span class="hljs-keyword">int</span> value;<span class="hljs-comment">//数据</span></span><br><span class="line">	<span class="hljs-built_in">list</span> *next;<span class="hljs-comment">//后指针 </span></span><br><span class="line">	<span class="hljs-built_in">list</span> *pre;<span class="hljs-comment">//前指针</span></span><br><span class="line">&#125;;<span class="hljs-comment">//链表结构体</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-初始化"><a href="#4-初始化" class="headerlink" title="4.初始化"></a>4.初始化</h5><p>我们已经创建好了一个链表，那么需要对它进行初始化操作，书写初始化函数。</p>
+<p>我们需要为head和tail开一个新的空间，否则将成为一个没空间没内存的“野指针”。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initialization</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *&amp;head, <span class="hljs-built_in">list</span> *&amp;tail)</span><span class="hljs-comment">//传入头指针与尾指针</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	head = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">	tail = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">    <span class="hljs-comment">//为head、tail开空间</span></span><br><span class="line">	head -&gt; next = tail;<span class="hljs-comment">//head的"next"指向tail</span></span><br><span class="line">	head -&gt; pre = <span class="hljs-literal">NULL</span>;<span class="hljs-comment">//head的"pre"指向NULL(空)</span></span><br><span class="line">	tail -&gt; pre = head;<span class="hljs-comment">//tail的"next"指向tail</span></span><br><span class="line">	tail -&gt; next = <span class="hljs-literal">NULL</span>;<span class="hljs-comment">//tail的"next"指向NULL(空)</span></span><br><span class="line">&#125;<span class="hljs-comment">//初始化</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="5-插入、删除"><a href="#5-插入、删除" class="headerlink" title="5.插入、删除"></a>5.插入、删除</h5><p>那么链表的插入、删除是怎样实现的呢？</p>
+<h6 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h6><p>我们想将一个new data插入data之后，我们需要将data的“next”指针指向new data，Tail的“pre”指针指向new data，new data的“next”指针指向TAIL、“pre”指针指向data。</p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/71f2d3f3cd2ed0b4.png" alt></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/b7cda7f2f4227909.png" alt></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/c894f825db620e86.png" alt></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/18ea48489a84a015.png" alt></p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *&amp;tail, <span class="hljs-keyword">int</span> v)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-built_in">list</span> *p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">    <span class="hljs-built_in">list</span> *q = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">	q = tail -&gt; pre;</span><br><span class="line">    p -&gt; value = v;</span><br><span class="line">    p -&gt; next = tail;</span><br><span class="line">    tail -&gt; pre = p;</span><br><span class="line">    p -&gt; pre = q;</span><br><span class="line">    q -&gt; next = p;</span><br><span class="line">&#125;<span class="hljs-comment">//添加</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h6><p>若想将data删掉，我们需要将HAED的“next”指针指向TAIL，TAIL的“pre”指针指向HEAD。</p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/c97e1df871a75566.png" alt></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/a36883913fc6b140.png" alt></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2019/11/3c31e970cd3c2195.png" alt></p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span>  <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *&amp;head, <span class="hljs-keyword">int</span> v)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">list</span> *p = head;</span><br><span class="line">	p = p -&gt; next;</span><br><span class="line">	<span class="hljs-keyword">while</span>(p -&gt; next != <span class="hljs-literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-keyword">if</span>(p -&gt; value == v)</span><br><span class="line">		&#123;</span><br><span class="line">			p -&gt; next -&gt; pre = p -&gt; pre;</span><br><span class="line">			p -&gt; pre -&gt; next = p -&gt; next;</span><br><span class="line">			<span class="hljs-keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		p = p -&gt; next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="hljs-comment">//删除</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="6-打印"><a href="#6-打印" class="headerlink" title="6.打印"></a>6.打印</h5><p>若想将链表中的数据打印出来，需要从head开始向后循环，”head-&gt;value“代表head节点指向的数据，每打印一个数据后，将head替换为”head-&gt;next“,也就是head现在指向的是head的下一个，直到head为空时，也就是head打印最后一个数据后，结束打印。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span>  <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *head)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"开始打印"</span>  &lt;&lt; <span class="hljs-built_in">endl</span>; </span><br><span class="line">	head = head -&gt; next;</span><br><span class="line">	<span class="hljs-keyword">while</span>(head -&gt; next != <span class="hljs-literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-built_in">cout</span> &lt;&lt; head -&gt; value &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">		head = head -&gt; next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"结束打印"</span>  &lt;&lt; <span class="hljs-built_in">endl</span>; </span><br><span class="line">&#125;<span class="hljs-comment">//打印</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="7-清空"><a href="#7-清空" class="headerlink" title="7.清空"></a>7.清空</h5><p>删除每一个节点指针，循环下去。需要注意的是，我们需要创建一个新的指针来存储删除前指针的下一个指针，这是因为节点被删除后就不具备指向下一个的作用了，会导致找不到节点而出现很多问题。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Empty</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *head)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">list</span> *p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">	<span class="hljs-built_in">list</span> *HEAD = head;</span><br><span class="line">	HEAD = HEAD -&gt; next;</span><br><span class="line">	<span class="hljs-keyword">while</span>(HEAD -&gt; next != <span class="hljs-literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p = HEAD -&gt; next;</span><br><span class="line">		HEAD -&gt; next -&gt; pre = HEAD -&gt; pre;</span><br><span class="line">		HEAD -&gt; pre -&gt; next = HEAD -&gt; next;</span><br><span class="line">		<span class="hljs-keyword">delete</span> HEAD;</span><br><span class="line">		HEAD = p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="hljs-comment">//清空</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="8-完整代码"><a href="#8-完整代码" class="headerlink" title="8.完整代码"></a>8.完整代码</h5><p>网上很多代码都写了“typedef”，身边一些同学也这么写过，据了解后发现“typedef”在c语言书写时会较轻松。<br>因为c语言在定义一个指针时不能直接“list xxx”，而需要“struct list xxx”。</p>
+<p>传参时是否加“&amp;”，是根据你的功能是否需要修改链表的头指针的值，若不改变使用“*”即可。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">list</span></span></span><br><span class="line"><span class="hljs-class">&#123;</span></span><br><span class="line">	<span class="hljs-keyword">int</span> value;<span class="hljs-comment">//数值 </span></span><br><span class="line">	<span class="hljs-built_in">list</span> *next;<span class="hljs-comment">//下一个 </span></span><br><span class="line">	<span class="hljs-built_in">list</span> *pre;<span class="hljs-comment">//上一个 </span></span><br><span class="line">&#125;;<span class="hljs-comment">//链表结构体 </span></span><br><span class="line"><span class="hljs-keyword">int</span> x;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initialization</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *&amp;head, <span class="hljs-built_in">list</span> *&amp;tail)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	head = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">	tail = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">	head -&gt; next = tail;</span><br><span class="line">	head -&gt; pre = <span class="hljs-literal">NULL</span>;</span><br><span class="line">	tail -&gt; pre = head;</span><br><span class="line">	tail -&gt; next = <span class="hljs-literal">NULL</span>;</span><br><span class="line">&#125;<span class="hljs-comment">//初始化 </span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *&amp;tail, <span class="hljs-keyword">int</span> v)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-built_in">list</span> *p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">    <span class="hljs-built_in">list</span> *q = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">	q = tail -&gt; pre;</span><br><span class="line">    p -&gt; value = v;</span><br><span class="line">    p -&gt; next = tail;</span><br><span class="line">    tail -&gt; pre = p;</span><br><span class="line">    p -&gt; pre = q;</span><br><span class="line">    q -&gt; next = p;</span><br><span class="line">&#125;<span class="hljs-comment">//添加 </span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Empty</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *&amp;head)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">list</span> *p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">list</span> ();</span><br><span class="line">	<span class="hljs-built_in">list</span> *HEAD = head;</span><br><span class="line">	HEAD = HEAD -&gt; next;</span><br><span class="line">	<span class="hljs-keyword">while</span>(HEAD -&gt; next != <span class="hljs-literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		p = HEAD -&gt; next;</span><br><span class="line">		HEAD -&gt; next -&gt; pre = HEAD -&gt; pre;</span><br><span class="line">		HEAD -&gt; pre -&gt; next = HEAD -&gt; next;</span><br><span class="line">		<span class="hljs-keyword">delete</span> HEAD;</span><br><span class="line">		HEAD = p;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;<span class="hljs-comment">//清空</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span>  <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *&amp;head, <span class="hljs-keyword">int</span> v)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">list</span> *p = head;</span><br><span class="line">	p = p -&gt; next;</span><br><span class="line">	<span class="hljs-keyword">while</span>(p -&gt; next != <span class="hljs-literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-keyword">if</span>(p -&gt; value == v)</span><br><span class="line">		&#123;</span><br><span class="line">			p -&gt; next -&gt; pre = p -&gt; pre;</span><br><span class="line">			p -&gt; pre -&gt; next = p -&gt; next;</span><br><span class="line">			<span class="hljs-keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		p = p -&gt; next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="hljs-comment">//删除</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span>  <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-built_in">list</span> *head)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"开始打印"</span>  &lt;&lt; <span class="hljs-built_in">endl</span>; </span><br><span class="line">	head = head -&gt; next;</span><br><span class="line">	<span class="hljs-keyword">while</span>(head -&gt; next != <span class="hljs-literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-built_in">cout</span> &lt;&lt; head -&gt; value &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">		head = head -&gt; next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"结束打印"</span>  &lt;&lt; <span class="hljs-built_in">endl</span>; </span><br><span class="line">&#125;<span class="hljs-comment">//打印 </span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">list</span> *head, *tail;</span><br><span class="line">	initialization(head, tail);</span><br><span class="line">	<span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"1.insert"</span> &lt;&lt; <span class="hljs-built_in">endl</span></span><br><span class="line">			 &lt;&lt; <span class="hljs-string">"2.Empty"</span>  &lt;&lt; <span class="hljs-built_in">endl</span></span><br><span class="line">			 &lt;&lt; <span class="hljs-string">"3.print"</span>  &lt;&lt; <span class="hljs-built_in">endl</span></span><br><span class="line">			 &lt;&lt; <span class="hljs-string">"4.Delete"</span> &lt;&lt; <span class="hljs-built_in">endl</span></span><br><span class="line">			 &lt;&lt; <span class="hljs-string">"5.EXIT"</span>   &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">		<span class="hljs-built_in">cin</span> &gt;&gt; x;</span><br><span class="line">		<span class="hljs-keyword">switch</span>(x)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>: <span class="hljs-built_in">cin</span> &gt;&gt; x;</span><br><span class="line">			insert(tail, x);</span><br><span class="line">				<span class="hljs-keyword">break</span>;</span><br><span class="line">			<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>: Empty(head);</span><br><span class="line">				<span class="hljs-keyword">break</span>;</span><br><span class="line">			<span class="hljs-keyword">case</span> <span class="hljs-number">3</span>: print(head);</span><br><span class="line">				<span class="hljs-keyword">break</span>;</span><br><span class="line">			<span class="hljs-keyword">case</span> <span class="hljs-number">4</span>: <span class="hljs-built_in">cin</span> &gt;&gt; x;</span><br><span class="line">			Delete(head, x);</span><br><span class="line">				<span class="hljs-keyword">break</span>;</span><br><span class="line">			<span class="hljs-keyword">case</span> <span class="hljs-number">5</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/data-structure/">data structure</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/23/Snake/">
+                <span class="level-item">Snake</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/w.png" alt="筱兔">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        筱兔
+                    </p>
+                    
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        1
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/xiaotufly" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#双链表">
+        <span class="has-mr-6">1</span>
+        <span>双链表</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-为什么要用链表">
+        <span class="has-mr-6">1.1</span>
+        <span>1.为什么要用链表</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-双链表模型">
+        <span class="has-mr-6">1.2</span>
+        <span>2.双链表模型</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-创建">
+        <span class="has-mr-6">1.3</span>
+        <span>3.创建</span>
+        </a></li><li>
+        <a class="is-flex" href="#4-初始化">
+        <span class="has-mr-6">1.4</span>
+        <span>4.初始化</span>
+        </a></li><li>
+        <a class="is-flex" href="#5-插入、删除">
+        <span class="has-mr-6">1.5</span>
+        <span>5.插入、删除</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#插入">
+        <span class="has-mr-6">1.5.1</span>
+        <span>插入</span>
+        </a></li><li>
+        <a class="is-flex" href="#删除">
+        <span class="has-mr-6">1.5.2</span>
+        <span>删除</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#6-打印">
+        <span class="has-mr-6">1.6</span>
+        <span>6.打印</span>
+        </a></li><li>
+        <a class="is-flex" href="#7-清空">
+        <span class="has-mr-6">1.7</span>
+        <span>7.清空</span>
+        </a></li><li>
+        <a class="is-flex" href="#8-完整代码">
+        <span class="has-mr-6">1.8</span>
+        <span>8.完整代码</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/code/">
+            <span class="level-start">
+                <span class="level-item">code</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/daily/" style="font-size: 10px;">daily</a> <a href="/tags/data-structure/" style="font-size: 10px;">data structure</a> <a href="/tags/game/" style="font-size: 10px;">game</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/11/03/List/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time></div>
+                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">List</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/07/23/Snake/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.7.23.jpg" alt="Snake">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-23T14:44:38.000Z">2019-07-23</time></div>
+                    <a href="/2019/07/23/Snake/" class="has-link-black-ter is-size-6">Snake</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/07/11/first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.7.11.jpeg" alt="HELLO WORLD">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-11T14:24:16.000Z">2019-07-11</time></div>
+                    <a href="/2019/07/11/first/" class="has-link-black-ter is-size-6">HELLO WORLD</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/daily/">
+                        <span class="tag">daily</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/data-structure/">
+                        <span class="tag">data structure</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/game/">
+                        <span class="tag">game</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/11/03/List/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time></div>
+                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">List</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/07/23/Snake/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.7.23.jpg" alt="Snake">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-23T14:44:38.000Z">2019-07-23</time></div>
+                    <a href="/2019/07/23/Snake/" class="has-link-black-ter is-size-6">Snake</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/07/11/first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.7.11.jpeg" alt="HELLO WORLD">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-11T14:24:16.000Z">2019-07-11</time></div>
+                    <a href="/2019/07/11/first/" class="has-link-black-ter is-size-6">HELLO WORLD</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/daily/">
+                        <span class="tag">daily</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/data-structure/">
+                        <span class="tag">data structure</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/game/">
+                        <span class="tag">game</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/w.png" alt="List" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 xiaotufly&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
