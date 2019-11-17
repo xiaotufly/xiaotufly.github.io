@@ -153,7 +153,7 @@
     
     <div class="card-image">
         <a href="/2019/11/17/tree/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.11.17.jpg" alt="tree">
+            <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
         </a>
     </div>
     
@@ -171,7 +171,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1563 个字)
+                    10 分钟 读完 (大约 1560 个字)
                 </span>
                 
                 
@@ -180,11 +180,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/11/17/tree/">tree</a>
+                <a class="has-link-black-ter" href="/2019/11/17/tree/">Binary Tree Calculator</a>
             
         </h1>
         <div class="content">
-            <h1 id="Binary-tree-calculator"><a href="#Binary-tree-calculator" class="headerlink" title="Binary tree calculator"></a>Binary tree calculator</h1><h4 id="1-基本思路"><a href="#1-基本思路" class="headerlink" title="1.基本思路"></a>1.基本思路</h4><p>​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tree，再利用二叉树节点之间的关系递推遍历计算即可。</p>
+            <h4 id="1-基本思路"><a href="#1-基本思路" class="headerlink" title="1.基本思路"></a>1.基本思路</h4><p>​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tree，再利用二叉树节点之间的关系递推遍历计算即可。</p>
 <h4 id="2-中缀表达式转后缀表达式"><a href="#2-中缀表达式转后缀表达式" class="headerlink" title="2.中缀表达式转后缀表达式"></a>2.中缀表达式转后缀表达式</h4><p>那么怎么才能将中缀表达式转为后缀表达式呢？我们来看下面一个例子。</p>
 <p>​                                                            <code>a+b*(c-d)/e</code></p>
 <p>上述则为一个中缀表达式，它的后缀表达式如下：</p>
@@ -220,7 +220,7 @@
     
     <div class="card-image">
         <a href="/2019/11/03/List/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+            <img class="thumbnail" src="/images/2019.11.6.jpg" alt="Double Linked List">
         </a>
     </div>
     
@@ -238,7 +238,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1354 个字)
+                    9 分钟 读完 (大约 1351 个字)
                 </span>
                 
                 
@@ -247,11 +247,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/11/03/List/">List</a>
+                <a class="has-link-black-ter" href="/2019/11/03/List/">Double Linked List</a>
             
         </h1>
         <div class="content">
-            <h1 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h1><h5 id="1-为什么要用链表"><a href="#1-为什么要用链表" class="headerlink" title="1.为什么要用链表"></a>1.为什么要用链表</h5><p>大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。</p>
+            <h5 id="1-为什么要用链表"><a href="#1-为什么要用链表" class="headerlink" title="1.为什么要用链表"></a>1.为什么要用链表</h5><p>大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。</p>
 <p>增加：</p>
 <figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> size)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = index, i &lt;= size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i+<span class="hljs-number">1</span>] = a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	a[index] = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -303,7 +303,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 828 个字)
+                    6 分钟 读完 (大约 825 个字)
                 </span>
                 
                 
@@ -316,7 +316,7 @@
             
         </h1>
         <div class="content">
-            <h2 id="贪吃蛇"><a href="#贪吃蛇" class="headerlink" title="贪吃蛇"></a>贪吃蛇</h2><p><img src="https://ftp.bmp.ovh/imgs/2019/11/57246b8ce3ef7c28.png" alt="snake"></p>
+            <p><img src="https://ftp.bmp.ovh/imgs/2019/11/57246b8ce3ef7c28.png" alt="snake"></p>
 <p>学年设计的时候做的贪吃蛇，只是简单的做出来基本操作，写的代码从时间和空间上看都不是很优。</p>
 <p>这里讲一下大概思路：</p>
 <p>一条蛇不停的移动， 玩家将控制蛇的方向，蛇在吃掉食物后，将会重新生成食物，若蛇吃到自己的身体或撞到边框则结束游戏并显示得分。</p>
@@ -368,7 +368,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 13 个字)
+                    几秒 读完 (大约 11 个字)
                 </span>
                 
                 
@@ -381,7 +381,7 @@
             
         </h1>
         <div class="content">
-            <h1 id="HELLO-WORLD"><a href="#HELLO-WORLD" class="headerlink" title="HELLO WORLD"></a>HELLO WORLD</h1><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"HELLO WORLD"</span>;</span><br><span class="line">	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"HELLO WORLD"</span>;</span><br><span class="line">	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -556,14 +556,14 @@
             
             <a href="/2019/11/17/tree/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="tree">
+                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-17T11:44:45.000Z">2019-11-17</time></div>
-                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">tree</a>
+                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">Binary Tree Calculator</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>
@@ -575,14 +575,14 @@
             
             <a href="/2019/11/03/List/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="Double Linked List">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time></div>
-                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">List</a>
+                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">Double Linked List</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>
@@ -723,14 +723,14 @@
             
             <a href="/2019/11/17/tree/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="tree">
+                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-17T11:44:45.000Z">2019-11-17</time></div>
-                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">tree</a>
+                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">Binary Tree Calculator</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>
@@ -742,14 +742,14 @@
             
             <a href="/2019/11/03/List/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="Double Linked List">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time></div>
-                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">List</a>
+                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">Double Linked List</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>

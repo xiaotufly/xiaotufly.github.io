@@ -2,24 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>tree - xiaotufly</title>
+<title>Binary Tree Calculator - xiaotufly</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Binary tree calculator1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之">
+    <meta name="description" content="1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tre">
 <meta name="keywords" content="data structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tree">
+<meta property="og:title" content="Binary Tree Calculator">
 <meta property="og:url" content="http://yoursite.com/2019/11/17/tree/index.html">
 <meta property="og:site_name" content="xiaotufly">
-<meta property="og:description" content="Binary tree calculator1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之">
+<meta property="og:description" content="1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tre">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/2019.11.17.jpg">
-<meta property="og:updated_time" content="2019-11-17T14:38:46.257Z">
+<meta property="og:updated_time" content="2019-11-17T15:02:07.733Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tree">
-<meta name="twitter:description" content="Binary tree calculator1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之">
+<meta name="twitter:title" content="Binary Tree Calculator">
+<meta name="twitter:description" content="1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tre">
 <meta name="twitter:image" content="http://yoursite.com/images/2019.11.17.jpg">
 
 
@@ -94,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/w.png" alt="tree" height="28">
+                <img src="/images/w.png" alt="Binary Tree Calculator" height="28">
             
             </a>
         </div>
@@ -126,10 +126,6 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -147,7 +143,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.11.17.jpg" alt="tree">
+            <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
         </span>
     </div>
     
@@ -165,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1563 个字)
+                    10 分钟 读完 (大约 1560 个字)
                 </span>
                 
                 
@@ -174,11 +170,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                tree
+                Binary Tree Calculator
             
         </h1>
         <div class="content">
-            <h1 id="Binary-tree-calculator"><a href="#Binary-tree-calculator" class="headerlink" title="Binary tree calculator"></a>Binary tree calculator</h1><h4 id="1-基本思路"><a href="#1-基本思路" class="headerlink" title="1.基本思路"></a>1.基本思路</h4><p>​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tree，再利用二叉树节点之间的关系递推遍历计算即可。</p>
+            <h4 id="1-基本思路"><a href="#1-基本思路" class="headerlink" title="1.基本思路"></a>1.基本思路</h4><p>​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tree，再利用二叉树节点之间的关系递推遍历计算即可。</p>
 <h4 id="2-中缀表达式转后缀表达式"><a href="#2-中缀表达式转后缀表达式" class="headerlink" title="2.中缀表达式转后缀表达式"></a>2.中缀表达式转后缀表达式</h4><p>那么怎么才能将中缀表达式转为后缀表达式呢？我们来看下面一个例子。</p>
 <p>​                                                            <code>a+b*(c-d)/e</code></p>
 <p>上述则为一个中缀表达式，它的后缀表达式如下：</p>
@@ -246,7 +242,7 @@
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/11/03/List/">
-                <span class="level-item">List</span>
+                <span class="level-item">Double Linked List</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -326,41 +322,6 @@
 </div>
     
         
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                目录
-            </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#Binary-tree-calculator">
-        <span class="has-mr-6">1</span>
-        <span>Binary tree calculator</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#1-基本思路">
-        <span class="has-mr-6">1.1</span>
-        <span>1.基本思路</span>
-        </a></li><li>
-        <a class="is-flex" href="#2-中缀表达式转后缀表达式">
-        <span class="has-mr-6">1.2</span>
-        <span>2.中缀表达式转后缀表达式</span>
-        </a></li><li>
-        <a class="is-flex" href="#3-构建Expression-tree">
-        <span class="has-mr-6">1.3</span>
-        <span>3.构建Expression tree</span>
-        </a></li><li>
-        <a class="is-flex" href="#4-计算Expression-tree">
-        <span class="has-mr-6">1.4</span>
-        <span>4.计算Expression tree</span>
-        </a></li><li>
-        <a class="is-flex" href="#5-完整代码">
-        <span class="has-mr-6">1.5</span>
-        <span>5.完整代码</span>
-        </a></li></ul></li></ul>
-        </div>
-    </div>
-</div>
-
     
         
 
@@ -448,14 +409,14 @@
             
             <a href="/2019/11/17/tree/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="tree">
+                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-17T11:44:45.000Z">2019-11-17</time></div>
-                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">tree</a>
+                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">Binary Tree Calculator</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>
@@ -467,14 +428,14 @@
             
             <a href="/2019/11/03/List/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="Double Linked List">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time></div>
-                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">List</a>
+                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">Double Linked List</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>
@@ -615,14 +576,14 @@
             
             <a href="/2019/11/17/tree/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="tree">
+                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-17T11:44:45.000Z">2019-11-17</time></div>
-                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">tree</a>
+                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">Binary Tree Calculator</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>
@@ -634,14 +595,14 @@
             
             <a href="/2019/11/03/List/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
+                    <img class="thumbnail" src="/images/2019.11.6.jpg" alt="Double Linked List">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time></div>
-                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">List</a>
+                    <a href="/2019/11/03/List/" class="has-link-black-ter is-size-6">Double Linked List</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/code/">code</a>
                     </p>
@@ -772,7 +733,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/w.png" alt="tree" height="28">
+                    <img src="/images/w.png" alt="Binary Tree Calculator" height="28">
                 
                 </a>
                 <p class="is-size-7">
