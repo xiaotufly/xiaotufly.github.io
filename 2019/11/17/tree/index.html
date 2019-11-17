@@ -2,23 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: data structure - xiaotufly</title>
+<title>tree - xiaotufly</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="一只兔子的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xiaotufly">
-<meta property="og:url" content="http://yoursite.com/tags/data-structure/index.html">
+    <meta name="description" content="Binary tree calculator1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之">
+<meta name="keywords" content="data structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tree">
+<meta property="og:url" content="http://yoursite.com/2019/11/17/tree/index.html">
 <meta property="og:site_name" content="xiaotufly">
-<meta property="og:description" content="一只兔子的博客">
+<meta property="og:description" content="Binary tree calculator1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.11.17.jpg">
+<meta property="og:updated_time" content="2019-11-17T14:38:46.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xiaotufly">
-<meta name="twitter:description" content="一只兔子的博客">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="tree">
+<meta name="twitter:description" content="Binary tree calculator1.基本思路​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之">
+<meta name="twitter:image" content="http://yoursite.com/images/2019.11.17.jpg">
 
 
 
@@ -92,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/w.png" alt="xiaotufly" height="28">
+                <img src="/images/w.png" alt="tree" height="28">
             
             </a>
         </div>
@@ -124,6 +126,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -138,22 +144,11 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">data structure</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2019/11/17/tree/" class="image is-7by1">
+        <span class="image is-7by1">
             <img class="thumbnail" src="/images/2019.11.17.jpg" alt="tree">
-        </a>
+        </span>
     </div>
     
     <div class="card-content article ">
@@ -179,7 +174,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/11/17/tree/">tree</a>
+                tree
             
         </h1>
         <div class="content">
@@ -193,16 +188,49 @@
 <p>(2)若遇到字符(‘+’、’-‘、’*’、’/‘),对比栈顶元素的优先级，如果比栈顶元素优先级高，则直接入栈，否则将栈中元素不断出栈，直到出现优先级比存入字符低，则将字符入栈。</p>
 <p>(3)若字符为’(‘,则直接入栈，若遇到‘)’，则将‘(’前的元素弹出。</p>
 <p>(4)若扫描完成后栈中还有元素滞留，则将栈中元素全部弹出。</p>
+<a id="more"></a>
+
+<p>为了使得大家清晰可见看懂，实现过程的图片每一步兔子都将它画了出来，所以图片有一点多……</p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9YKe.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9eu4.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms98gO.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms938K.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9r28.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9Nbd.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9tDH.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9aVA.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9dUI.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9w5t.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9BPP.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Ms9D8f.png" alt></p>
+<h4 id="3-构建Expression-tree"><a href="#3-构建Expression-tree" class="headerlink" title="3.构建Expression tree"></a>3.构建Expression tree</h4><p>我们将每一个数或符号都看做一个节点，在此基础上构建Expression tree。</p>
+<p>创建一个指针栈，遍历后缀表达式，若遇到数字则作为一个节点存入指针栈，若遇到符号则取出栈中两个节点作为此节点的左右儿子，再将节点存入栈中，以此类推。当后缀表达式被完全遍历后，栈中将只存在一个节点指针，此指针则为树的根节点。</p>
+<p><img src="https://s2.ax1x.com/2019/11/17/MsuTtU.png" alt="由于a-d都为数字则直接存入栈中 不再重复作图"></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/Msn7QA.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/MsnHsI.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/MsnbLt.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/MsnLeP.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/11/17/MsnOdf.png" alt></p>
+<h4 id="4-计算Expression-tree"><a href="#4-计算Expression-tree" class="headerlink" title="4.计算Expression tree"></a>4.计算Expression tree</h4><p>我们已经建立好了Expression tree，现在我们只需要计算出值就可以完成我们的Binary tree calculator了！</p>
+<p>那么…..要怎么计算呢？</p>
+<p>兔子思考了一下，发现可以使用递归的方法计算答案！</p>
+<p>我们从树的根节点开始从上往下遍历，每遇到一个符号则在使用此函数返回与符号相符的运算式，直到遇到数字则返回数字本身的值。</p>
+<p>例如，根节点为‘+’，则<code>return 计算&#39;+&#39;的左节点的值 + 计算&#39;+&#39;右节点的值</code>，而为了得到左右节点的值，函数会继续运算，当遇到‘+’的左儿子则<code>return a</code>，当遇到右儿子‘/’则会继续返回左右儿子的计算值<code>return计算&#39;/&#39;的左节点的值 / 计算&#39;/&#39;右节点的值</code>,而为了得到左右节点的值，函数会继续运算，当遇到左儿子‘*’则会继续返回左右儿子的计算值<code>return计算 * 的左节点的值 * 计算 * 右节点的值</code>,而为了得到左右节点的值，函数会继续运算，当遇到 * 的左儿子则<code>return b</code>，当遇到右儿子‘-’则会继续返回左右儿子的计算值<code>return计算&#39;-&#39;的左节点的值 - 计算&#39;-&#39;右节点的值</code>,而为了得到左右节点的值，函数会继续运算，当遇到‘-’的左儿子则<code>return c</code>，当遇到右儿子则  <code>return d</code>,当遇到‘/’的右儿子则<code>return e</code>.</p>
+<p>经历了层层的递归返回，我们将得到最终表达式答案！</p>
+<h4 id="5-完整代码"><a href="#5-完整代码" class="headerlink" title="5.完整代码"></a>5.完整代码</h4><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">QAQ</span><span class="hljs-params">(<span class="hljs-built_in">string</span> pe)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">double</span> num1=<span class="hljs-number">0</span>;</span><br><span class="line">	<span class="hljs-keyword">double</span> num2=<span class="hljs-number">0</span>;</span><br><span class="line">	<span class="hljs-keyword">int</span> size = <span class="hljs-number">0</span>;</span><br><span class="line">	<span class="hljs-keyword">int</span> f = <span class="hljs-number">1</span>;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; pe.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-keyword">if</span>(pe[i] == <span class="hljs-string">'.'</span>) </span><br><span class="line">		&#123;</span><br><span class="line">			f = <span class="hljs-number">0</span>;</span><br><span class="line">			<span class="hljs-keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="hljs-keyword">if</span>(f) num1 = num1 * <span class="hljs-number">10</span> + pe[i] - <span class="hljs-string">'0'</span>;</span><br><span class="line">		<span class="hljs-keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			num2 = num2 * <span class="hljs-number">10</span> + pe[i] - <span class="hljs-string">'0'</span>;</span><br><span class="line">			size ++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">return</span> (num1 + num2 / <span class="hljs-built_in">pow</span>(<span class="hljs-number">10</span>,size)); </span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ppe</span><span class="hljs-params">(<span class="hljs-built_in">string</span> ix,<span class="hljs-built_in">string</span> &amp;pe)</span><span class="hljs-comment">//中缀转后缀 </span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">stack</span>&lt;<span class="hljs-keyword">char</span>&gt; QWQ;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; ix.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-keyword">if</span>((ix[i] &lt;= <span class="hljs-string">'9'</span> &amp;&amp; ix[i] &gt;= <span class="hljs-string">'0'</span>) || ix[i] == <span class="hljs-string">'.'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="hljs-keyword">while</span>((ix[i] &lt;= <span class="hljs-string">'9'</span> &amp;&amp; ix[i] &gt;= <span class="hljs-string">'0'</span>) || ix[i] == <span class="hljs-string">'.'</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				pe += ix[i];</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">			pe +=<span class="hljs-string">' '</span>;</span><br><span class="line">			i--;</span><br><span class="line">		&#125;<span class="hljs-comment">//数字直接放 </span></span><br><span class="line">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>((ix[i] == <span class="hljs-string">'+'</span> || ix[i] == <span class="hljs-string">'-'</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="hljs-keyword">if</span>(QWQ.empty() || QWQ.top() == <span class="hljs-string">'('</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				QWQ.push(ix[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="hljs-keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="hljs-keyword">while</span>(!QWQ.empty())</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="hljs-keyword">if</span>(QWQ.top() == <span class="hljs-string">'('</span>) <span class="hljs-keyword">break</span>;</span><br><span class="line">					pe += QWQ.top();</span><br><span class="line">					QWQ.pop();</span><br><span class="line">				&#125;</span><br><span class="line">				QWQ.push(ix[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>((ix[i] == <span class="hljs-string">'*'</span> || ix[i] == <span class="hljs-string">'/'</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="hljs-keyword">if</span>(QWQ.empty() || QWQ.top() == <span class="hljs-string">'+'</span> || QWQ.top() == <span class="hljs-string">'-'</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				QWQ.push(ix[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="hljs-keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="hljs-keyword">while</span>(!QWQ.empty())</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="hljs-keyword">if</span>(QWQ.top() == <span class="hljs-string">'+'</span>|| QWQ.top() == <span class="hljs-string">'-'</span>|| QWQ.top() == <span class="hljs-string">'('</span>) <span class="hljs-keyword">break</span>;</span><br><span class="line">					pe += QWQ.top();</span><br><span class="line">					QWQ.pop();</span><br><span class="line">				&#125;</span><br><span class="line">				QWQ.push(ix[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ix[i] == <span class="hljs-string">'('</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			QWQ.push(ix[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ix[i] == <span class="hljs-string">')'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="hljs-keyword">while</span>(QWQ.top() != <span class="hljs-string">'('</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				pe += QWQ.top();</span><br><span class="line">				QWQ.pop();</span><br><span class="line">			&#125;</span><br><span class="line">			QWQ.pop();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">while</span>(!QWQ.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		pe += QWQ.top();</span><br><span class="line">		QWQ.pop();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-built_in">cout</span> &lt;&lt; pe &lt;&lt; <span class="hljs-built_in">endl</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">tree</span></span></span><br><span class="line"><span class="hljs-class">&#123;</span></span><br><span class="line">	<span class="hljs-built_in">string</span> data;</span><br><span class="line">	tree *left;</span><br><span class="line">	tree *right;</span><br><span class="line">&#125;;<span class="hljs-comment">//一棵树 </span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-built_in">string</span> value,<span class="hljs-built_in">stack</span>&lt;tree *&gt; &amp;ss,<span class="hljs-keyword">int</span> flag)</span><span class="hljs-comment">// </span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	tree *t = <span class="hljs-keyword">new</span> tree();</span><br><span class="line">	t -&gt; data = value;</span><br><span class="line">	t -&gt; left = <span class="hljs-literal">NULL</span>;</span><br><span class="line">	t -&gt; right = <span class="hljs-literal">NULL</span>;</span><br><span class="line">	<span class="hljs-keyword">if</span>(!ss.empty() &amp;&amp; flag)</span><br><span class="line">	&#123;</span><br><span class="line">		tree *p1 = ss.top();</span><br><span class="line">		ss.pop();</span><br><span class="line">		tree *p2 = ss.top();</span><br><span class="line">		ss.pop();</span><br><span class="line">		t -&gt; left = p2;</span><br><span class="line">		t -&gt; right = p1;</span><br><span class="line">	&#125;	</span><br><span class="line">	ss.push(t);</span><br><span class="line">&#125; </span><br><span class="line"><span class="hljs-function">tree *<span class="hljs-title">creat_tree</span><span class="hljs-params">(<span class="hljs-built_in">string</span> pe,<span class="hljs-built_in">stack</span>&lt;tree *&gt; &amp;ss)</span><span class="hljs-comment">//建立表达式树 </span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;	</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; pe.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-built_in">string</span> num_ex = <span class="hljs-string">""</span>;</span><br><span class="line">		<span class="hljs-built_in">string</span> ch_ex = <span class="hljs-string">""</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="hljs-keyword">if</span>((pe[i] &lt;= <span class="hljs-string">'9'</span> &amp;&amp; pe[i] &gt;= <span class="hljs-string">'0'</span>) || pe[i] == <span class="hljs-string">'.'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="hljs-keyword">while</span>(pe[i] != <span class="hljs-string">' '</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				num_ex += pe[i];</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">			insert(num_ex, ss,<span class="hljs-number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="hljs-keyword">else</span> </span><br><span class="line">		&#123;	</span><br><span class="line">			ch_ex += pe[i];</span><br><span class="line">			insert(ch_ex, ss,<span class="hljs-number">1</span>);</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	tree *tmp = ss.top();</span><br><span class="line">	<span class="hljs-keyword">return</span> ss.top();</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">Calculator</span><span class="hljs-params">(tree *t)</span><span class="hljs-comment">//计算器 </span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">if</span>(t -&gt; data == <span class="hljs-string">"+"</span>) <span class="hljs-keyword">return</span> Calculator(t -&gt; left) + Calculator(t -&gt; right);</span><br><span class="line">	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(t -&gt; data == <span class="hljs-string">"-"</span>) <span class="hljs-keyword">return</span> Calculator(t -&gt; left) - Calculator(t -&gt; right);</span><br><span class="line">	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(t -&gt; data == <span class="hljs-string">"*"</span>) <span class="hljs-keyword">return</span> Calculator(t -&gt; left) * Calculator(t -&gt; right);</span><br><span class="line">	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(t -&gt; data == <span class="hljs-string">"/"</span>) <span class="hljs-keyword">return</span> Calculator(t -&gt; left) / Calculator(t -&gt; right);</span><br><span class="line">	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> QAQ(t -&gt; data);</span><br><span class="line">&#125; </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">string</span> ix;</span><br><span class="line">	<span class="hljs-built_in">string</span> pe;</span><br><span class="line">	<span class="hljs-built_in">stack</span>&lt;tree *&gt; ss;<span class="hljs-comment">//指针栈 </span></span><br><span class="line">	<span class="hljs-built_in">cin</span> &gt;&gt; ix;</span><br><span class="line">	ppe(ix,pe);</span><br><span class="line">	<span class="hljs-built_in">cout</span> &lt;&lt; Calculator(creat_tree(pe,ss)) &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/17/tree/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/data-structure/">data structure</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -212,72 +240,19 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/11/03/List/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.11.6.jpg" alt="List">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    9 分钟 读完 (大约 1354 个字)
-                </span>
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/11/03/List/">
+                <span class="level-item">List</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/03/List/">List</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h1><h5 id="1-为什么要用链表"><a href="#1-为什么要用链表" class="headerlink" title="1.为什么要用链表"></a>1.为什么要用链表</h5><p>大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。</p>
-<p>增加：</p>
-<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> size)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = index, i &lt;= size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i+<span class="hljs-number">1</span>] = a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	a[index] = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>删减：</p>
-<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> size)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = index, i &lt;= size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i] = a[i+<span class="hljs-number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这样的时间复杂度会很高，也十分麻烦，需要遍历一遍才能完成操作，而链表可以之前在中间插入、删除。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/03/List/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
 
 
 </div>
@@ -351,6 +326,41 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Binary-tree-calculator">
+        <span class="has-mr-6">1</span>
+        <span>Binary tree calculator</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-基本思路">
+        <span class="has-mr-6">1.1</span>
+        <span>1.基本思路</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-中缀表达式转后缀表达式">
+        <span class="has-mr-6">1.2</span>
+        <span>2.中缀表达式转后缀表达式</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-构建Expression-tree">
+        <span class="has-mr-6">1.3</span>
+        <span>3.构建Expression tree</span>
+        </a></li><li>
+        <a class="is-flex" href="#4-计算Expression-tree">
+        <span class="has-mr-6">1.4</span>
+        <span>4.计算Expression tree</span>
+        </a></li><li>
+        <a class="is-flex" href="#5-完整代码">
+        <span class="has-mr-6">1.5</span>
+        <span>5.完整代码</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -762,7 +772,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/w.png" alt="xiaotufly" height="28">
+                    <img src="/images/w.png" alt="tree" height="28">
                 
                 </a>
                 <p class="is-size-7">
