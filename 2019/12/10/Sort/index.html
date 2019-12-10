@@ -2,23 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: game - xiaotufly</title>
+<title>Merge Sort / Quickly Sort / Shell Sort - xiaotufly</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="一只兔子的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xiaotufly">
-<meta property="og:url" content="http://yoursite.com/tags/game/index.html">
+    <meta name="description" content="这次我们介绍三种排序手写方法：Merge Sort、Quickly Sort 、Shell Sort. 本文排序都使用的字符串组。 Merge SortMerge Sort 也称为归并排序，算法如下： 归并排序是将两个已经处理好的上升序列整合在一起成为一个新的上升序列。 算法：将两个序列从左到右依次对比比较，分别设定两个序列的头尾指向，对比此时下标两个序列相对应的数字，小的则放入整合序列中，更新下">
+<meta name="keywords" content="data structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Merge Sort &#x2F; Quickly Sort &#x2F; Shell Sort">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/Sort/index.html">
 <meta property="og:site_name" content="xiaotufly">
-<meta property="og:description" content="一只兔子的博客">
+<meta property="og:description" content="这次我们介绍三种排序手写方法：Merge Sort、Quickly Sort 、Shell Sort. 本文排序都使用的字符串组。 Merge SortMerge Sort 也称为归并排序，算法如下： 归并排序是将两个已经处理好的上升序列整合在一起成为一个新的上升序列。 算法：将两个序列从左到右依次对比比较，分别设定两个序列的头尾指向，对比此时下标两个序列相对应的数字，小的则放入整合序列中，更新下">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.12.10.jpg">
+<meta property="og:updated_time" content="2019-12-10T11:48:49.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xiaotufly">
-<meta name="twitter:description" content="一只兔子的博客">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="Merge Sort &#x2F; Quickly Sort &#x2F; Shell Sort">
+<meta name="twitter:description" content="这次我们介绍三种排序手写方法：Merge Sort、Quickly Sort 、Shell Sort. 本文排序都使用的字符串组。 Merge SortMerge Sort 也称为归并排序，算法如下： 归并排序是将两个已经处理好的上升序列整合在一起成为一个新的上升序列。 算法：将两个序列从左到右依次对比比较，分别设定两个序列的头尾指向，对比此时下标两个序列相对应的数字，小的则放入整合序列中，更新下">
+<meta name="twitter:image" content="http://yoursite.com/images/2019.12.10.jpg">
 
 
 
@@ -92,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/w.png" alt="xiaotufly" height="28">
+                <img src="/images/w.png" alt="Merge Sort / Quickly Sort / Shell Sort" height="28">
             
             </a>
         </div>
@@ -138,29 +140,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">game</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2019/07/23/Snake/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.7.23.jpg" alt="Snake">
-        </a>
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/2019.12.10.jpg" alt="Merge Sort / Quickly Sort / Shell Sort">
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-23T14:44:38.000Z">2019-07-23</time>
+                <time class="level-item has-text-grey" datetime="2019-12-10T06:28:42.000Z">2019-12-10</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/code/">code</a>
@@ -170,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 825 个字)
+                    5 分钟 读完 (大约 694 个字)
                 </span>
                 
                 
@@ -179,28 +170,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/07/23/Snake/">Snake</a>
+                Merge Sort / Quickly Sort / Shell Sort
             
         </h1>
         <div class="content">
-            <p><img src="https://ftp.bmp.ovh/imgs/2019/11/57246b8ce3ef7c28.png" alt="snake"></p>
-<p>学年设计的时候做的贪吃蛇，只是简单的做出来基本操作，写的代码从时间和空间上看都不是很优。</p>
-<p>这里讲一下大概思路：</p>
-<p>一条蛇不停的移动， 玩家将控制蛇的方向，蛇在吃掉食物后，将会重新生成食物，若蛇吃到自己的身体或撞到边框则结束游戏并显示得分。</p>
-<p>一个最简贪吃蛇游戏需要3个部分：</p>
-<p>1.地图</p>
-<p>2.蛇移动</p>
-<p>3.食物</p>
+            <p>这次我们介绍三种排序手写方法：Merge Sort、Quickly Sort 、Shell Sort.</p>
+<p>本文排序都使用的字符串组。</p>
+<h4 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h4><p>Merge Sort 也称为归并排序，算法如下：</p>
+<p>归并排序是将两个已经处理好的上升序列整合在一起成为一个新的上升序列。</p>
+<p>算法：将两个序列从左到右依次对比比较，分别设定两个序列的头尾指向，对比此时下标两个序列相对应的数字，小的则放入整合序列中，更新下标，若相等，则任意一个放入整合序列中，若其中一个序列已经放完，则按照顺序将另一个序列全部放入整合序列中。</p>
+<a id="more"></a>
+
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//s1、s2为两个上升序列，s3为整合序列</span></span><br><span class="line"><span class="hljs-comment">//l1、r1，l2、r2,分别为两个上升序列的头尾下标</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Merge_Sort</span><span class="hljs-params">(<span class="hljs-built_in">string</span> *&amp;s1, <span class="hljs-keyword">int</span> l1, <span class="hljs-keyword">int</span> r1, <span class="hljs-built_in">string</span> *&amp;s2, <span class="hljs-keyword">int</span> l2, <span class="hljs-keyword">int</span> r2, <span class="hljs-built_in">string</span> *&amp;s3)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> i1 = l1, i2 = l2;</span><br><span class="line">	<span class="hljs-keyword">int</span> len = <span class="hljs-number">0</span>;<span class="hljs-comment">//整合序列的长度</span></span><br><span class="line">	<span class="hljs-keyword">while</span>(i1 &lt;= r1 &amp;&amp; i2 &lt;= r2)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-keyword">if</span>(s1[i1] &gt;= s2[i2]) s3[++len] = s2[i2++];</span><br><span class="line">		<span class="hljs-keyword">else</span> s3[++len] = s1[i1++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = i1; i &lt;= r1; i++) s3[++len] = s1[i];</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = i2; i &lt;= r2; i++) s3[++len] = s2[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Quickly-Sort"><a href="#Quickly-Sort" class="headerlink" title="Quickly Sort"></a>Quickly Sort</h4><p>Quickly Sort也就是头文件<code>algorithm</code>中的内置sort函数，而且它真的很快！</p>
+<p>那么为什么要学习手写呢？因为在一些比赛或考试中不能使用内置函数sort，只能手写。</p>
+<p>算法：从数列中取出一个基准数，然后以此为基准，比基准数大的数字都放在它的右边，将比基准数小的数都放在它的左边，然后对左右子区间采用相同的方法，直到每个区间只有一个数。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Sort</span><span class="hljs-params">(<span class="hljs-built_in">string</span> *&amp;a,<span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> r)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">string</span> x = a[l];<span class="hljs-comment">//取出一个数</span></span><br><span class="line">	<span class="hljs-keyword">int</span> i = l, j = r;<span class="hljs-comment">//左右下标</span></span><br><span class="line">	<span class="hljs-keyword">if</span>(l &gt;= r) <span class="hljs-keyword">return</span> ;</span><br><span class="line">	<span class="hljs-keyword">while</span>(i &lt; j)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-keyword">while</span>(i &lt; j &amp;&amp; x &lt;= a[j]) j--;<span class="hljs-comment">//从右到左找到一个小于x的</span></span><br><span class="line">		<span class="hljs-keyword">if</span>(i &lt; j) a[i++] = a[j];</span><br><span class="line">		<span class="hljs-keyword">while</span>(i &lt; j &amp;&amp; a[i] &lt;= x) i++;<span class="hljs-comment">//从左到右找到一个大于x的</span></span><br><span class="line">		<span class="hljs-keyword">if</span>(i &lt; j) a[j--] = a[i];	</span><br><span class="line">	&#125;</span><br><span class="line">	a[i] = x;<span class="hljs-comment">//将它放中间</span></span><br><span class="line">	Sort(a, l, i - <span class="hljs-number">1</span>);</span><br><span class="line">	Sort(a, i + <span class="hljs-number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Shell-Sort"><a href="#Shell-Sort" class="headerlink" title="Shell Sort"></a>Shell Sort</h4><p>Shell Sort又叫希尔排序，是一种排序演化而成的排序方式。</p>
+<p>算法：开始时：将序列区分为n/2个间隔，将相同间隔的数进行排序，减小间隔数，按照以上操作继续排序，直到间隔为1停止。</p>
+<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Shellsort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> n)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> tmp, i, j;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> Increment = n / <span class="hljs-number">2</span>; Increment &gt; <span class="hljs-number">0</span>; Increment /= <span class="hljs-number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="hljs-keyword">for</span>(i = Increment; i &lt; n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			tmp = a[i];</span><br><span class="line">			<span class="hljs-keyword">for</span>(j = i; j &gt;= Increment; j -= Increment)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="hljs-keyword">if</span>(tmp &lt; a[j - Increment]) a[j] = a[j - Increment];</span><br><span class="line">				<span class="hljs-keyword">else</span> <span class="hljs-keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			a[j] = tmp;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/07/23/Snake/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/data-structure/">data structure</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -210,7 +213,19 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/11/17/tree/">
+                <span class="level-item">Binary Tree Calculator</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -755,7 +770,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/w.png" alt="xiaotufly" height="28">
+                    <img src="/images/w.png" alt="Merge Sort / Quickly Sort / Shell Sort" height="28">
                 
                 </a>
                 <p class="is-size-7">
