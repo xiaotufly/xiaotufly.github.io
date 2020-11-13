@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>python - xiaotufly</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="一.基础语法注意:python使用时需要严格缩进，否则在执行是会出现报错 1.注释1# 这里是一个注释嗷！  2.打印1print (&apos;hello word!&apos;)">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python">
+<meta property="og:url" content="http://yoursite.com/2020/10/12/Python/index.html">
+<meta property="og:site_name" content="xiaotufly">
+<meta property="og:description" content="一.基础语法注意:python使用时需要严格缩进，否则在执行是会出现报错 1.注释1# 这里是一个注释嗷！  2.打印1print (&apos;hello word!&apos;)">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/images/2020.11.13.jpg">
+<meta property="og:updated_time" content="2020-11-13T16:08:21.659Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python">
+<meta name="twitter:description" content="一.基础语法注意:python使用时需要严格缩进，否则在执行是会出现报错 1.注释1# 这里是一个注释嗷！  2.打印1print (&apos;hello word!&apos;)">
+<meta name="twitter:image" content="http://yoursite.com/images/2020.11.13.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/w.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/w.png" alt="python" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">主页</a>
+                
+                <a class="navbar-item" href="/archives">文章</a>
+                
+                <a class="navbar-item" href="/categories">分类</a>
+                
+                <a class="navbar-item" href="/tags">标签</a>
+                
+                <a class="navbar-item" href="/about">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/2020.11.13.jpg" alt="python">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-10-12T01:01:35.000Z">2020-10-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/code/">code</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    21 分钟 读完 (大约 3160 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                python
+            
+        </h1>
+        <div class="content">
+            <h2 id="一-基础语法"><a href="#一-基础语法" class="headerlink" title="一.基础语法"></a>一.基础语法</h2><p>注意:python使用时需要严格缩进，否则在执行是会出现报错</p>
+<h3 id="1-注释"><a href="#1-注释" class="headerlink" title="1.注释"></a>1.注释</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 这里是一个注释嗷！</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-打印"><a href="#2-打印" class="headerlink" title="2.打印"></a>2.打印</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">print</span> (<span class="hljs-string">'hello word!'</span>)</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h3 id="3-if-amp-else"><a href="#3-if-amp-else" class="headerlink" title="3. if &amp; else"></a>3. if &amp; else</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> 判断条件:</span><br><span class="line">    <span class="hljs-keyword">print</span> (<span class="hljs-string">'true'</span>)</span><br><span class="line"><span class="hljs-keyword">else</span> 判断条件:</span><br><span class="line">    .......</span><br><span class="line"><span class="hljs-keyword">else</span> 判断条件:</span><br><span class="line">    .......</span><br><span class="line"><span class="hljs-keyword">else</span>:</span><br><span class="line">    .......</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-循环"><a href="#4-循环" class="headerlink" title="4.循环"></a>4.循环</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">while</span> 判断条件 :</span><br><span class="line">    ...........</span><br><span class="line"><span class="hljs-comment"># while 循环</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(a,b):<span class="hljs-comment"># 循环a -- b 之间的数字</span></span><br><span class="line">    ............</span><br><span class="line"><span class="hljs-comment"># for 循环</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">pass</span></span><br><span class="line"><span class="hljs-comment"># pass 一般不做任何事情 做站位语句</span></span><br><span class="line"><span class="hljs-comment"># 其他循环中还会使用continue,break，常见的语法不加以解释</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-类型"><a href="#5-类型" class="headerlink" title="5.类型"></a>5.类型</h3><p>python中的数据类型不允许改变，可以删除对象，重新分配空间。</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-keyword">del</span> num <span class="hljs-comment"># 删除变量num</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>创建</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="hljs-string">'a string'</span></span><br></pre></td></tr></table></figure>
+
+<p>python 的索引可以为负数，反向索引，从右边开始计算</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s[<span class="hljs-number">-1</span>] <span class="hljs-comment"># 'g'</span></span><br><span class="line">s[<span class="hljs-number">-2</span>] <span class="hljs-comment"># 'n'</span></span><br></pre></td></tr></table></figure>
+
+<p>一些常用函数</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">len(s) <span class="hljs-comment"># 字符串长度</span></span><br><span class="line">upper()    <span class="hljs-comment"># 全部大写</span></span><br><span class="line">lower()    <span class="hljs-comment"># 全部小写</span></span><br><span class="line">swapcase()    <span class="hljs-comment"># 大小写互换</span></span><br><span class="line">capitalize()    <span class="hljs-comment"># 首字母大写，其余小写</span></span><br><span class="line">title()    <span class="hljs-comment"># 首字母大写</span></span><br><span class="line">ljust(width)     <span class="hljs-comment"># 获取固定长度，左对齐，右边不够用空格补齐</span></span><br><span class="line">rjust(width)     <span class="hljs-comment"># 获取固定长度，右对齐，左边不够用空格补齐</span></span><br><span class="line">center(width)  <span class="hljs-comment"># 获取固定长度，中间对齐，两边不够用空格补齐</span></span><br><span class="line">zfill(width)      <span class="hljs-comment"># 获取固定长度，右对齐，左边不足用0补齐</span></span><br><span class="line">find()    <span class="hljs-comment"># 搜索指定字符串，没有返回-1</span></span><br><span class="line">index()    <span class="hljs-comment"># 同上，但是找不到会报错</span></span><br><span class="line">rfind()    <span class="hljs-comment"># 从右边开始查找</span></span><br><span class="line">count()    <span class="hljs-comment"># 统计指定的字符串出现的次数</span></span><br></pre></td></tr></table></figure>
+
+<p>不可变性 </p>
+<p>无法在特定位置修改值，修改会清理旧的对象。</p>
+<p>python中的核心类型，数字、字符串以及元祖是不可变的，而字典与列表可完全自由改变。</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="hljs-string">'w'</span> + s[<span class="hljs-number">1</span>:] <span class="hljs-comment"># 'w string'</span></span><br><span class="line">s[<span class="hljs-number">0</span>] = <span class="hljs-string">'a'</span> <span class="hljs-comment">#报错代码</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>列表没有固定类型的约束，用中括号表示，组成对象是有序的，组成的各个对象允许不同。</p>
+<p>创建</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = []</span><br><span class="line">list2 = [<span class="hljs-string">'QWQ'</span>, <span class="hljs-string">'QAQ'</span>, <span class="hljs-string">'QVQ'</span>, <span class="hljs-string">'QUQ'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>访问</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list2[<span class="hljs-number">0</span>] <span class="hljs-comment"># 'QWQ'</span></span><br><span class="line">list2[<span class="hljs-number">1</span>:<span class="hljs-number">4</span>] <span class="hljs-comment"># 'QAQ QVQ'</span></span><br></pre></td></tr></table></figure>
+
+<p>一些常用函数</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">append() <span class="hljs-comment"># 添加函数</span></span><br><span class="line">cmp(list1, list2) <span class="hljs-comment"># 比较两个列表的元素</span></span><br><span class="line">len(list) <span class="hljs-comment"># 列表元素个数</span></span><br><span class="line">max(list) <span class="hljs-comment"># 返回列表元素最大值</span></span><br><span class="line">min(list) <span class="hljs-comment"># 返回列表元素最小值</span></span><br><span class="line">list(seq) <span class="hljs-comment"># 将元组转换为列表</span></span><br><span class="line">count(obj) <span class="hljs-comment"># 统计某个元素在列表中出现的次数</span></span><br><span class="line">extend(seq) <span class="hljs-comment"># 在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</span></span><br><span class="line">index(obj) <span class="hljs-comment"># 从列表中找出某个值第一个匹配项的索引位置</span></span><br><span class="line">insert(index, obj) <span class="hljs-comment"># 将对象插入列表</span></span><br><span class="line">pop([index=<span class="hljs-number">-1</span>]) <span class="hljs-comment"># 移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</span></span><br><span class="line">remove(obj) <span class="hljs-comment"># 移除列表中某个值的第一个匹配项</span></span><br><span class="line">reverse() <span class="hljs-comment"># 反向列表中元素</span></span><br><span class="line">sort(cmp=<span class="hljs-literal">None</span>, key=<span class="hljs-literal">None</span>, reverse=<span class="hljs-literal">False</span>) <span class="hljs-comment"># 对原列表进行排序</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="元祖"><a href="#元祖" class="headerlink" title="元祖"></a>元祖</h4><p>元祖是序列，但是它具有不可变性，与字符串类似，它提供了一种完整性的约束，编写大型程序更为方便。元祖角色类似于其他语言中的“常数”声明，这种常数概念在Python中是与对象相结合，而不是变量。</p>
+<p>创建</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">t1 = ()</span><br><span class="line">t2 = (<span class="hljs-number">1</span>,) <span class="hljs-comment"># 元祖只包含一个元素需要在后面加上逗号</span></span><br><span class="line">t3 = (<span class="hljs-string">'QWQ'</span>, <span class="hljs-string">'QAQ'</span>, <span class="hljs-string">'QVQ'</span>, <span class="hljs-string">'QUQ'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>访问</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 与字符串类似</span></span><br></pre></td></tr></table></figure>
+
+<p>修改</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 修改元祖的值是非法的，因为不可变性。</span></span><br></pre></td></tr></table></figure>
+
+<p>一些常用函数</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cmp(tuple1, tuple2) <span class="hljs-comment"># 比较两个元组元素。</span></span><br><span class="line">append(value) <span class="hljs-comment"># 添加元素</span></span><br><span class="line">len(tuple) <span class="hljs-comment">#  元素个数</span></span><br><span class="line">max(tuple) <span class="hljs-comment"># 返回元祖最大元素</span></span><br><span class="line">min(tuple) <span class="hljs-comment"># 返回元祖最小元素</span></span><br><span class="line">tuple(seq) <span class="hljs-comment"># 将列表转换为元祖</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h4><p>字典是另一种可变容器模型，且可存储任意类型对象，用大括号表示，组成对象是无序的，搜索方式是哈希搜索，速度很快。</p>
+<p>创建</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;key1 : value1, key2 : value2 &#125;</span><br><span class="line">d1 = &#123;<span class="hljs-string">'QWQ'</span>: <span class="hljs-string">'123'</span>, <span class="hljs-string">'QAQ'</span>: <span class="hljs-string">'456'</span>, <span class="hljs-string">'QVQ'</span>: <span class="hljs-string">'321'</span>, <span class="hljs-string">'QUQ'</span>: <span class="hljs-string">'654'</span>&#125;</span><br><span class="line">d2 = &#123;<span class="hljs-string">'QWQ'</span>: <span class="hljs-number">123</span>, <span class="hljs-number">321</span>: <span class="hljs-number">456</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>访问</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">print</span> d1[<span class="hljs-string">'QWQ'</span>] <span class="hljs-comment"># 123</span></span><br></pre></td></tr></table></figure>
+
+<p>添加</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d1[<span class="hljs-string">'OVO'</span>] = <span class="hljs-string">'555'</span></span><br></pre></td></tr></table></figure>
+
+<p>修改</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d1[<span class="hljs-string">'QWQ'</span>] = <span class="hljs-string">'333'</span></span><br></pre></td></tr></table></figure>
+
+<p>删除</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">del</span> d1[<span class="hljs-string">'QWQ'</span>]  <span class="hljs-comment"># 删除键是'QWQ'的条目</span></span><br><span class="line">d1.clear()      <span class="hljs-comment"># 清空字典所有条目</span></span><br><span class="line"><span class="hljs-keyword">del</span> d1          <span class="hljs-comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
+
+<p>一些常用函数</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cmp(dict1, dict2) <span class="hljs-comment"># 比较两个字典元素</span></span><br><span class="line">len(dict) <span class="hljs-comment"># 计算字典元素个数，即键的总数</span></span><br><span class="line">str(dict) <span class="hljs-comment"># 输出字典可打印的字符串表示</span></span><br><span class="line">type(variable) <span class="hljs-comment"># 返回输入的变量类型，如果变量是字典就返回字典类型</span></span><br><span class="line">clear() <span class="hljs-comment"># 删除字典内所有元素</span></span><br><span class="line">copy() <span class="hljs-comment"># 返回一个字典的浅复制</span></span><br><span class="line">fromkeys(seq[, val]) <span class="hljs-comment"># 创建一个新字典，以序列 seq 中元素做字典的键，val 为字典所有键对应的初始值</span></span><br><span class="line">get(key, default=<span class="hljs-literal">None</span>) <span class="hljs-comment"># 返回指定键的值，如果值不在字典中返回default值</span></span><br><span class="line">has_key(key) <span class="hljs-comment"># 如果键在字典dict里返回true，否则返回false</span></span><br><span class="line">items() <span class="hljs-comment"># 以列表返回可遍历的(键, 值) 元组数组</span></span><br><span class="line">keys() <span class="hljs-comment"># 以列表返回一个字典所有的键</span></span><br><span class="line">setdefault(key, default=<span class="hljs-literal">None</span>) <span class="hljs-comment"># 和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default</span></span><br><span class="line">update(dict2) <span class="hljs-comment"># 把字典dict2的键/值对更新到dict里</span></span><br><span class="line">values() <span class="hljs-comment"># 以列表返回字典中的所有值</span></span><br><span class="line">pop(key[,default]) </span><br><span class="line"><span class="hljs-comment"># 删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。</span></span><br><span class="line">popitem() <span class="hljs-comment"># 返回并删除字典中的最后一对键和值。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-函数定义"><a href="#6-函数定义" class="headerlink" title="6.函数定义"></a>6.函数定义</h3><p>规则</p>
+<ul>
+<li>函数代码块以 <strong>def</strong> 关键词开头，后接函数标识符名称和圆括号<strong>()</strong>。</li>
+<li>任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。</li>
+<li>函数的第一行语句可以选择性地使用文档字符串—用于存放函数说明。</li>
+<li>函数内容以冒号起始，并且缩进。</li>
+<li><strong>return [表达式]</strong> 结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回 None。</li>
+</ul>
+<p>定义</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">functionname</span><span class="hljs-params">( parameters )</span>:</span></span><br><span class="line">   <span class="hljs-string">"""comments"""</span>  <span class="hljs-comment"># 对函数进行一些说明</span></span><br><span class="line">   function_suite</span><br><span class="line">   <span class="hljs-keyword">return</span> [expression]</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-模块"><a href="#7-模块" class="headerlink" title="7.模块"></a>7.模块</h3><p>每一个以扩展名py结尾的Python源代码文件都是一个模块，其他文件可以通过导入这个模块来读取这个模块的内容。Python中本来就有很多模块，这里理解为包，需要使用则安装包。</p>
+<p>定义模块</p>
+<p>首先我们先建立一个新的py文件取名mode</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="hljs-string">"QWQ"</span>)</span><br><span class="line">x = <span class="hljs-string">'QUQ'</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">QAQ</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    print(x)</span><br><span class="line"><span class="hljs-comment"># 取名为mode.py</span></span><br></pre></td></tr></table></figure>
+
+<p>加载模块</p>
+<p>python在第一次导入后就将模块名加载到内存，后续的import语句会判断模块是否已被导入，若已导入将仅对加载在内存中的模块对象增加了一次引用，不会重新执行模块语句。</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> mode <span class="hljs-comment"># mode 为模块名</span></span><br><span class="line"><span class="hljs-comment"># 导入mode模块后运行后在输出处可以看到“QWQ”</span></span><br></pre></td></tr></table></figure>
+
+<p>使用模块</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mode.QAQ() <span class="hljs-comment"># 调用模块中的函数</span></span><br><span class="line"><span class="hljs-comment"># 运行后结果 “QUQ”</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="8-文件"><a href="#8-文件" class="headerlink" title="8.文件"></a>8.文件</h3><p>读文件</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="hljs-string">'text.txt'</span>, <span class="hljs-string">'r'</span>) <span class="hljs-comment"># r表示文本文件格式，二进制。 此处为文件打开格式。</span></span><br><span class="line"><span class="hljs-comment"># 注意，若text.txt文件不存在，则会报错</span></span><br><span class="line"><span class="hljs-comment"># 我们提前在文件写好内容“读文件成功！”</span></span><br><span class="line">file.read()</span><br><span class="line">file.close() <span class="hljs-comment"># 最后一定要记得关闭文件！</span></span><br></pre></td></tr></table></figure>
+
+<p>写文件</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 发现‘r’模式下不能写文件，只能读文件，尴尬，记得改成'w'</span></span><br><span class="line">file.write(<span class="hljs-string">'hello word!'</span>)</span><br><span class="line">file.close() <span class="hljs-comment"># 最后一定要记得关闭文件！</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二-大数据常用包"><a href="#二-大数据常用包" class="headerlink" title="二.大数据常用包"></a>二.大数据常用包</h2><p>（只用过部分函数，以后使用了更详细的会更新吧…）</p>
+<h3 id="1-pandas"><a href="#1-pandas" class="headerlink" title="1.pandas"></a>1.pandas</h3><p>pandas使数据预处理、清洗、分析工作变得更快更简单。核心数据结构：Series、DataFrame。</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+
+<h4 id="Series"><a href="#Series" class="headerlink" title="Series"></a>Series</h4><p>类似于一维数组的对象，它由一组数据（各种NumPy数据类型）以及一组与之相关的数据标签（即索引）组成，即index和values两部分，可以通过索引的方式选取Series中的单个或一组值。</p>
+<p>创建</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">a1 = np.arange(<span class="hljs-number">5</span>)</span><br><span class="line">s1 = pd.Series(a1)</span><br><span class="line">print(s1) <span class="hljs-comment"># 通过标量创建，创建从0--4的长度索引</span></span><br><span class="line"><span class="hljs-comment">#  输出结果</span></span><br><span class="line"><span class="hljs-comment">#0    0</span></span><br><span class="line"><span class="hljs-comment">#1    1</span></span><br><span class="line"><span class="hljs-comment">#2    2</span></span><br><span class="line"><span class="hljs-comment">#3    3</span></span><br><span class="line"><span class="hljs-comment">#4    4</span></span><br><span class="line">a2 = &#123;<span class="hljs-string">'1'</span>:<span class="hljs-number">1</span>,<span class="hljs-string">'2'</span>:<span class="hljs-number">2</span>,<span class="hljs-string">'3'</span>:<span class="hljs-number">3</span>,<span class="hljs-string">'a'</span>:<span class="hljs-string">'hello'</span>,<span class="hljs-string">'b'</span>:<span class="hljs-string">'python'</span>,<span class="hljs-string">'c'</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]&#125;</span><br><span class="line">s2 = pd.Series(a2)</span><br><span class="line">print(s,type(s2)) <span class="hljs-comment"># 自定义通过字典创建</span></span><br><span class="line"><span class="hljs-comment">#  输出结果</span></span><br><span class="line"><span class="hljs-comment">#1         1</span></span><br><span class="line"><span class="hljs-comment">#2         2</span></span><br><span class="line"><span class="hljs-comment">#3         3</span></span><br><span class="line"><span class="hljs-comment">#a     hello</span></span><br><span class="line"><span class="hljs-comment">#b    python</span></span><br><span class="line"><span class="hljs-comment">#c    [1, 2]</span></span><br><span class="line">a3 =</span><br></pre></td></tr></table></figure>
+
+<p>修改</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s2[<span class="hljs-string">'1'</span>] = <span class="hljs-string">'QWQ'</span></span><br><span class="line">print(s2)</span><br><span class="line"><span class="hljs-comment">#  输出结果</span></span><br><span class="line"><span class="hljs-comment">#1       QWQ</span></span><br><span class="line"><span class="hljs-comment">#2         2</span></span><br><span class="line"><span class="hljs-comment">#3         3</span></span><br><span class="line"><span class="hljs-comment">#a     hello</span></span><br><span class="line"><span class="hljs-comment">#b    python</span></span><br><span class="line"><span class="hljs-comment">#c    [1, 2]</span></span><br></pre></td></tr></table></figure>
+
+<p>删除</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">del</span> s2[<span class="hljs-string">'2'</span>]</span><br><span class="line">print(s2)</span><br><span class="line"><span class="hljs-comment">#  输出结果</span></span><br><span class="line"><span class="hljs-comment"># 1       QWQ</span></span><br><span class="line"><span class="hljs-comment"># 3         3</span></span><br><span class="line"><span class="hljs-comment"># a     hello</span></span><br><span class="line"><span class="hljs-comment"># b    python</span></span><br><span class="line"><span class="hljs-comment"># c    [1, 2]</span></span><br><span class="line">s2 = s2.drop([<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>])</span><br><span class="line">print(s2)</span><br><span class="line"><span class="hljs-comment">#  输出结果</span></span><br><span class="line"><span class="hljs-comment"># 1      QWQ</span></span><br><span class="line"><span class="hljs-comment"># 3        3</span></span><br><span class="line"><span class="hljs-comment"># a    hello</span></span><br></pre></td></tr></table></figure>
+
+<p>数据查看</p>
+<p>.head()方法是查看前几行的数据，默认是5行</p>
+<p>.tail()方法是查看后几行的数据，默认也是5行</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(s2.head(<span class="hljs-number">2</span>),<span class="hljs-string">'\n'</span>)</span><br><span class="line">print(s2.tail())</span><br><span class="line"><span class="hljs-comment">#  输出结果</span></span><br><span class="line"><span class="hljs-comment"># 1    QWQ</span></span><br><span class="line"><span class="hljs-comment"># 3      3</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 1      QWQ</span></span><br><span class="line"><span class="hljs-comment"># 3        3</span></span><br><span class="line"><span class="hljs-comment"># a    hello</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h4><p>DataFrame 是一种二维的数据结构，非常接近于电子表格或者类似 mysql 数据库的形式。它的竖行称之为 columns，横行跟前面的 Series 一样，称之为 index，也就是说可以通过 columns 和 index 来确定一个主句的位置。</p>
+<p>创建</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;<span class="hljs-string">"A"</span>:[<span class="hljs-string">'QWQ'</span>,<span class="hljs-string">'QAQ'</span>,<span class="hljs-string">'QVQ'</span>],<span class="hljs-string">"B"</span>:[<span class="hljs-number">100</span>,<span class="hljs-number">200</span>,<span class="hljs-number">300</span>],<span class="hljs-string">"C"</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]&#125;</span><br><span class="line">f1 = DataFrame(data)</span><br><span class="line"><span class="hljs-comment">#  输出结果</span></span><br><span class="line"><span class="hljs-comment">#      A    B  C</span></span><br><span class="line"><span class="hljs-comment"># 0  QWQ  100  1</span></span><br><span class="line"><span class="hljs-comment"># 1  QAQ  200  2</span></span><br><span class="line"><span class="hljs-comment"># 2  QVQ  300  3</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h4><p>排序</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sort_index <span class="hljs-comment"># 根据索引来排序</span></span><br><span class="line">sort_values <span class="hljs-comment"># 根据指定列值排序</span></span><br></pre></td></tr></table></figure>
+
+<p>统计</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum <span class="hljs-comment"># 值的总和</span></span><br><span class="line">mean <span class="hljs-comment"># 值的平均数</span></span><br><span class="line">median <span class="hljs-comment"># 值的算数中位数</span></span><br><span class="line">mad <span class="hljs-comment"># 根据平均值计算平均绝对离差</span></span><br></pre></td></tr></table></figure>
+
+<p>去重</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">newdata.drop_duplicates(subset=[<span class="hljs-string">'A'</span>,<span class="hljs-string">'B'</span>,<span class="hljs-string">'C'</span>,<span class="hljs-string">'D'</span>],keep=<span class="hljs-literal">False</span>)</span><br><span class="line"><span class="hljs-comment"># 当keep=False时，就是去掉所有的重复行</span></span><br><span class="line"><span class="hljs-comment"># 当keep=‘first’时，就是保留第一次出现的重复行</span></span><br><span class="line"><span class="hljs-comment"># 当keep=’last’时就是保留最后一次出现的重复行。</span></span><br></pre></td></tr></table></figure>
+
+<p>读写文件</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(<span class="hljs-string">"data.txt"</span>)</span><br><span class="line"></span><br><span class="line">pd.to_csv(<span class="hljs-string">"d:/snp/test.csv"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-matplotlib"><a href="#2-matplotlib" class="headerlink" title="2.matplotlib"></a>2.matplotlib</h3><p>可用于可视化。</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+<p>散点图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(x, y, marker=<span class="hljs-literal">None</span>) </span><br><span class="line"><span class="hljs-comment"># x，y为坐标</span></span><br><span class="line"><span class="hljs-comment"># marker为标记符号</span></span><br><span class="line"><span class="hljs-comment">#例如</span></span><br><span class="line">plt.scatter(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, marker=<span class="hljs-literal">None</span>) <span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D90sQf" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D90sQf.png" alt></a></p>
+<p>折线图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="hljs-string">'11'</span>,<span class="hljs-string">'12'</span>,<span class="hljs-string">'13'</span>,<span class="hljs-string">'14'</span>,<span class="hljs-string">'15'</span>,<span class="hljs-string">'16'</span>,<span class="hljs-string">'17'</span>]</span><br><span class="line">y = [<span class="hljs-number">58</span>,<span class="hljs-number">60</span>,<span class="hljs-number">63</span>,<span class="hljs-number">71</span>,<span class="hljs-number">84</span>,<span class="hljs-number">90</span>,<span class="hljs-number">10</span>]</span><br><span class="line">plt.plot(x,y) <span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D9BhHe" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D9BhHe.png" alt></a></p>
+<p>直方图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np</span><br><span class="line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt</span><br><span class="line">data = np.random.randn(<span class="hljs-number">10000</span>)</span><br><span class="line">plt.hist(data, bins=<span class="hljs-number">4</span>, normed=<span class="hljs-number">0</span>, facecolor=<span class="hljs-string">"blue"</span>, edgecolor=<span class="hljs-string">"black"</span>, alpha=<span class="hljs-number">0.7</span>)</span><br><span class="line"><span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D9BzNj" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D9BzNj.png" alt></a></p>
+<p>条形图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt</span><br><span class="line"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> font_manager</span><br><span class="line">b = [<span class="hljs-number">56.01</span>, <span class="hljs-number">26.94</span>, <span class="hljs-number">17.53</span>, <span class="hljs-number">16.49</span>, <span class="hljs-number">15.45</span>, <span class="hljs-number">12.96</span>, <span class="hljs-number">11.8</span>, <span class="hljs-number">11.61</span>, <span class="hljs-number">11.28</span>, <span class="hljs-number">11.12</span>, <span class="hljs-number">10.49</span>, <span class="hljs-number">10.3</span>, <span class="hljs-number">8.75</span>, <span class="hljs-number">7.55</span>, <span class="hljs-number">7.32</span>, <span class="hljs-number">6.99</span>, <span class="hljs-number">6.88</span>,</span><br><span class="line">     <span class="hljs-number">6.86</span>, <span class="hljs-number">6.58</span>, <span class="hljs-number">6.23</span>]</span><br><span class="line">plt.figure(figsize=(<span class="hljs-number">15</span>,<span class="hljs-number">7</span>))</span><br><span class="line">plt.bar(range(len(b)),b,width=<span class="hljs-number">0.3</span>)</span><br><span class="line"><span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D9sl7D" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D9sl7D.png" alt></a></p>
+<p>箱线图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt</span><br><span class="line">dataArray=[<span class="hljs-number">1</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">11</span>,<span class="hljs-number">8</span>,<span class="hljs-number">8</span>,<span class="hljs-number">10</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">7</span>,<span class="hljs-number">15</span>]</span><br><span class="line">plt.boxplot(dataArray,labels=[<span class="hljs-string">"A"</span>])</span><br><span class="line"><span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D9s5EF" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D9s5EF.png" alt></a></p>
+<p>饼图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt</span><br><span class="line">labels = <span class="hljs-string">'A'</span>, <span class="hljs-string">'B'</span></span><br><span class="line">sizes = [<span class="hljs-number">15</span>, <span class="hljs-number">30</span>]</span><br><span class="line">colors = [<span class="hljs-string">'blue'</span>, <span class="hljs-string">'gold'</span>]</span><br><span class="line">explode = (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>) </span><br><span class="line">plt.pie(sizes, explode=explode, labels=labels, colors=colors,</span><br><span class="line">  autopct=<span class="hljs-string">'%1.1f%%'</span>, shadow=<span class="hljs-literal">False</span>, startangle=<span class="hljs-number">90</span>)</span><br><span class="line"><span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D9yPgI" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D9yPgI.png" alt></a></p>
+<p>热力图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt  </span><br><span class="line">X = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]]  </span><br><span class="line">plt.imshow(X)  </span><br><span class="line">plt.colorbar()</span><br><span class="line"><span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D9yaG9" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D9yaG9.png" alt></a></p>
+<p>雷达图</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt</span><br><span class="line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np</span><br><span class="line"><span class="hljs-comment"># 构建角度与值</span></span><br><span class="line">theta = np.array([<span class="hljs-number">2.55</span>,<span class="hljs-number">4.75</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1.25</span>,<span class="hljs-number">1.65</span>])</span><br><span class="line">r = [<span class="hljs-number">20</span>,<span class="hljs-number">60</span>,<span class="hljs-number">40</span>,<span class="hljs-number">80</span>,<span class="hljs-number">20</span>]</span><br><span class="line">plt.style.use(<span class="hljs-string">'ggplot'</span>) <span class="hljs-comment"># 使用ggplot的绘图风格</span></span><br><span class="line">plt.polar(theta*np.pi,r,<span class="hljs-string">"r-"</span>,lw=<span class="hljs-number">1</span>)</span><br><span class="line"><span class="hljs-comment"># 设置填充颜色，并且透明度为0.75</span></span><br><span class="line">plt.fill(theta*np.pi,r,<span class="hljs-string">'r'</span>,alpha=<span class="hljs-number">0.75</span>)</span><br><span class="line">plt.ylim(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>)</span><br><span class="line">plt.grid(<span class="hljs-literal">True</span>)<span class="hljs-comment">#显示网格线</span></span><br><span class="line"><span class="hljs-comment"># 结果如下图</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/D960YQ" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D960YQ.png" alt></a></p>
+<p>华为云比赛画的航海图部分</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd  </span><br><span class="line"><span class="hljs-keyword">import</span> folium</span><br><span class="line">world_map = folium.Map()</span><br><span class="line">world_map</span><br><span class="line">list = []</span><br><span class="line">lat = <span class="hljs-number">0</span></span><br><span class="line">lng = <span class="hljs-number">0</span></span><br><span class="line">incidents = folium.map.FeatureGroup()</span><br><span class="line">df = pd.read_csv(<span class="hljs-string">"get_test_port.csv"</span>,usecols = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>], encoding = <span class="hljs-string">'gbk'</span>)</span><br><span class="line">af = pd.read_csv(<span class="hljs-string">"loadingOrder.csv"</span>,usecols = [<span class="hljs-number">0</span>], encoding = <span class="hljs-string">'gbk'</span>)</span><br><span class="line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(af)):</span><br><span class="line">    s = af.iat[i,<span class="hljs-number">0</span>] <span class="hljs-comment"># 订单号名称</span></span><br><span class="line">    incidents = folium.map.FeatureGroup()</span><br><span class="line">    world_map = folium.Map() <span class="hljs-comment">#初始化地图</span></span><br><span class="line">    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(len(df)):</span><br><span class="line">        <span class="hljs-keyword">if</span> af.iat[i,<span class="hljs-number">0</span>] == df.iat[j,<span class="hljs-number">0</span>]:</span><br><span class="line">           lat = df.iat[j,<span class="hljs-number">2</span>]</span><br><span class="line">           lng = df.iat[j,<span class="hljs-number">1</span>]</span><br><span class="line">           nlat = df.iat[j,<span class="hljs-number">4</span>]</span><br><span class="line">           nlng = df.iat[j,<span class="hljs-number">3</span>]</span><br><span class="line">           <span class="hljs-comment"># 增加红点lat与lng</span></span><br><span class="line">           incidents.add_child(</span><br><span class="line">            folium.CircleMarker(</span><br><span class="line">                [lat, lng],</span><br><span class="line">                radius=<span class="hljs-number">20</span>,</span><br><span class="line">                color=<span class="hljs-string">'yellow'</span>,</span><br><span class="line">                fill=<span class="hljs-literal">True</span>,</span><br><span class="line">                fill_color=<span class="hljs-string">'red'</span>,</span><br><span class="line">                fill_opacity=<span class="hljs-number">0.4</span></span><br><span class="line">            )</span><br><span class="line">            )</span><br><span class="line">           </span><br><span class="line">           <span class="hljs-comment"># 增加蓝点nlat与nlng</span></span><br><span class="line">           incidents.add_child(</span><br><span class="line">            folium.CircleMarker(</span><br><span class="line">                [nlat, nlng],</span><br><span class="line">                radius=<span class="hljs-number">5</span>,</span><br><span class="line">                color=<span class="hljs-string">'yellow'</span>,</span><br><span class="line">                fill=<span class="hljs-literal">True</span>,</span><br><span class="line">                fill_color=<span class="hljs-string">'blue'</span>,</span><br><span class="line">                fill_opacity=<span class="hljs-number">0.4</span></span><br><span class="line">            )</span><br><span class="line">            )</span><br><span class="line">          </span><br><span class="line">           <span class="hljs-comment">#world_map = folium.Map(location=[lat, lng], zoom_start=20) # 选择一个点为比例尺</span></span><br><span class="line">           world_map.add_child(incidents) <span class="hljs-comment">#将点放入地图</span></span><br><span class="line">           folium.Marker([nlat, nlng], popup=df.iat[j,<span class="hljs-number">5</span>]).add_to(world_map)<span class="hljs-comment">#对点做标记</span></span><br><span class="line">    s = af.iat[i,<span class="hljs-number">0</span>] + <span class="hljs-string">".html"</span></span><br><span class="line">    <span class="hljs-comment">#m = folium.Map(location=[nlat, nlng]) </span></span><br><span class="line">    world_map.save(s.format(af.iat[i,<span class="hljs-number">0</span>]))</span><br><span class="line">    print(af.iat[i,<span class="hljs-number">0</span>] + <span class="hljs-string">"已生成"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>列举其中一张图</p>
+<p><a href="https://imgchr.com/i/D96XkD" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/11/13/D96XkD.png" alt></a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/python/">python</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/09/14/How to configure the Java Web compilation environment/">
+                <span class="level-item">How to configure the Java Web compilation environment</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/w.png" alt="筱兔">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        筱兔
+                    </p>
+                    
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/xiaotufly" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#一-基础语法">
+        <span class="has-mr-6">1</span>
+        <span>一.基础语法</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-注释">
+        <span class="has-mr-6">1.1</span>
+        <span>1.注释</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-打印">
+        <span class="has-mr-6">1.2</span>
+        <span>2.打印</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-if-amp-else">
+        <span class="has-mr-6">1.3</span>
+        <span>3. if &amp; else</span>
+        </a></li><li>
+        <a class="is-flex" href="#4-循环">
+        <span class="has-mr-6">1.4</span>
+        <span>4.循环</span>
+        </a></li><li>
+        <a class="is-flex" href="#5-类型">
+        <span class="has-mr-6">1.5</span>
+        <span>5.类型</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#字符串">
+        <span class="has-mr-6">1.5.1</span>
+        <span>字符串</span>
+        </a></li><li>
+        <a class="is-flex" href="#列表">
+        <span class="has-mr-6">1.5.2</span>
+        <span>列表</span>
+        </a></li><li>
+        <a class="is-flex" href="#元祖">
+        <span class="has-mr-6">1.5.3</span>
+        <span>元祖</span>
+        </a></li><li>
+        <a class="is-flex" href="#字典">
+        <span class="has-mr-6">1.5.4</span>
+        <span>字典</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#6-函数定义">
+        <span class="has-mr-6">1.6</span>
+        <span>6.函数定义</span>
+        </a></li><li>
+        <a class="is-flex" href="#7-模块">
+        <span class="has-mr-6">1.7</span>
+        <span>7.模块</span>
+        </a></li><li>
+        <a class="is-flex" href="#8-文件">
+        <span class="has-mr-6">1.8</span>
+        <span>8.文件</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#二-大数据常用包">
+        <span class="has-mr-6">2</span>
+        <span>二.大数据常用包</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-pandas">
+        <span class="has-mr-6">2.1</span>
+        <span>1.pandas</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Series">
+        <span class="has-mr-6">2.1.1</span>
+        <span>Series</span>
+        </a></li><li>
+        <a class="is-flex" href="#DataFrame">
+        <span class="has-mr-6">2.1.2</span>
+        <span>DataFrame</span>
+        </a></li><li>
+        <a class="is-flex" href="#常用函数">
+        <span class="has-mr-6">2.1.3</span>
+        <span>常用函数</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#2-matplotlib">
+        <span class="has-mr-6">2.2</span>
+        <span>2.matplotlib</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Tutorials/">
+            <span class="level-start">
+                <span class="level-item">Tutorials</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/code/">
+            <span class="level-start">
+                <span class="level-item">code</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/code/c/">
+            <span class="level-start">
+                <span class="level-item">c++</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/daily/" style="font-size: 10px;">daily</a> <a href="/tags/data-structure/" style="font-size: 20px;">data structure</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/10/12/Python/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2020.11.13.jpg" alt="python">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-10-12T01:01:35.000Z">2020-10-12</time></div>
+                    <a href="/2020/10/12/Python/" class="has-link-black-ter is-size-6">python</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/09/14/How to configure the Java Web compilation environment/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2020.9.14.jpg" alt="How to configure the Java Web compilation environment">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-14T11:32:00.000Z">2020-09-14</time></div>
+                    <a href="/2020/09/14/How to configure the Java Web compilation environment/" class="has-link-black-ter is-size-6">How to configure the Java Web compilation environment</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Tutorials/">Tutorials</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/05/How to configure the Java compilation environment/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2020.3.5.jpg" alt="How to configure the Java compilation environment">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-05T13:13:53.000Z">2020-03-05</time></div>
+                    <a href="/2020/03/05/How to configure the Java compilation environment/" class="has-link-black-ter is-size-6">How to configure the Java compilation environment</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Tutorials/">Tutorials</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/10/Sort/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.12.10.jpg" alt="Merge Sort / Quickly Sort / Shell Sort">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-10T06:28:42.000Z">2019-12-10</time></div>
+                    <a href="/2019/12/10/Sort/" class="has-link-black-ter is-size-6">Merge Sort / Quickly Sort / Shell Sort</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a> / <a class="has-link-grey -link" href="/categories/code/c/">c++</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/11/17/tree/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-17T11:44:45.000Z">2019-11-17</time></div>
+                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">Binary Tree Calculator</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a> / <a class="has-link-grey -link" href="/categories/code/c/">c++</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/daily/">
+                        <span class="tag">daily</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/data-structure/">
+                        <span class="tag">data structure</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/game/">
+                        <span class="tag">game</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/python/">
+                        <span class="tag">python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/10/12/Python/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2020.11.13.jpg" alt="python">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-10-12T01:01:35.000Z">2020-10-12</time></div>
+                    <a href="/2020/10/12/Python/" class="has-link-black-ter is-size-6">python</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/09/14/How to configure the Java Web compilation environment/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2020.9.14.jpg" alt="How to configure the Java Web compilation environment">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-14T11:32:00.000Z">2020-09-14</time></div>
+                    <a href="/2020/09/14/How to configure the Java Web compilation environment/" class="has-link-black-ter is-size-6">How to configure the Java Web compilation environment</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Tutorials/">Tutorials</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/05/How to configure the Java compilation environment/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2020.3.5.jpg" alt="How to configure the Java compilation environment">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-05T13:13:53.000Z">2020-03-05</time></div>
+                    <a href="/2020/03/05/How to configure the Java compilation environment/" class="has-link-black-ter is-size-6">How to configure the Java compilation environment</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Tutorials/">Tutorials</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/10/Sort/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.12.10.jpg" alt="Merge Sort / Quickly Sort / Shell Sort">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-10T06:28:42.000Z">2019-12-10</time></div>
+                    <a href="/2019/12/10/Sort/" class="has-link-black-ter is-size-6">Merge Sort / Quickly Sort / Shell Sort</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a> / <a class="has-link-grey -link" href="/categories/code/c/">c++</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/11/17/tree/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-17T11:44:45.000Z">2019-11-17</time></div>
+                    <a href="/2019/11/17/tree/" class="has-link-black-ter is-size-6">Binary Tree Calculator</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/code/">code</a> / <a class="has-link-grey -link" href="/categories/code/c/">c++</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/daily/">
+                        <span class="tag">daily</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/data-structure/">
+                        <span class="tag">data structure</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/game/">
+                        <span class="tag">game</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/python/">
+                        <span class="tag">python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/w.png" alt="python" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 xiaotufly&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
