@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>xiaotufly</title>
+<title>归档: 2021 - xiaotufly</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,7 +10,7 @@
     <meta name="description" content="一只兔子的博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="xiaotufly">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2021/index.html">
 <meta property="og:site_name" content="xiaotufly">
 <meta property="og:description" content="一只兔子的博客">
 <meta property="og:locale" content="zh-CN">
@@ -100,7 +100,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active" href="/">主页</a>
+                <a class="navbar-item" href="/">主页</a>
                 
                 <a class="navbar-item" href="/archives">文章</a>
                 
@@ -138,559 +138,42 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2021/04/08/Machine learning linear algorithm/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2021.4.8.jpg" alt="线性回归与逻辑回归">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-04-08T05:41:07.000Z">2021-04-08</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 818 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/04/08/Machine learning linear algorithm/">线性回归与逻辑回归</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="线性回归-boston房价预测"><a href="#线性回归-boston房价预测" class="headerlink" title="线性回归(boston房价预测)"></a>线性回归(boston房价预测)</h3><h5 id="1-数据预处理"><a href="#1-数据预处理" class="headerlink" title="(1)数据预处理"></a>(1)数据预处理</h5><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(<span class="hljs-string">"data.txt"</span>, delim_whitespace=<span class="hljs-literal">True</span>, names=[<span class="hljs-string">'CRIM'</span>, <span class="hljs-string">'ZN'</span>, <span class="hljs-string">'INDUS'</span>,<span class="hljs-string">'CHAS'</span>,<span class="hljs-string">' NOX'</span>,<span class="hljs-string">'RM'</span>,<span class="hljs-string">'AGE'</span>,<span class="hljs-string">' DIS'</span>,<span class="hljs-string">' RAD'</span>,<span class="hljs-string">' TAX'</span>,<span class="hljs-string">'PTRATIO'</span>,<span class="hljs-string">'B'</span>,<span class="hljs-string">'LSTAT'</span>,<span class="hljs-string">'MEDV'</span>])</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(data)):</span><br><span class="line">    <span class="hljs-keyword">if</span>((i + <span class="hljs-number">1</span>) % <span class="hljs-number">2</span> != <span class="hljs-number">1</span>):</span><br><span class="line">        data[<span class="hljs-string">"B"</span>][i - <span class="hljs-number">1</span>] = data[<span class="hljs-string">"CRIM"</span>][i]</span><br><span class="line">        data[<span class="hljs-string">"LSTAT"</span>][i - <span class="hljs-number">1</span>] = data[<span class="hljs-string">"ZN"</span>][i]</span><br><span class="line">        data[<span class="hljs-string">"MEDV"</span>][i - <span class="hljs-number">1</span>] = data[<span class="hljs-string">"INDUS"</span>][i]</span><br><span class="line">        data = data.drop([i], axis = <span class="hljs-number">0</span>)</span><br><span class="line">data <span class="hljs-comment"># 查看数据</span></span><br></pre></td></tr></table></figure>
 
-<p><a href="https://imgtu.com/i/cJI87n" target="_blank" rel="noopener"><img src="https://z3.ax1x.com/2021/04/08/cJI87n.png" alt></a></p>
-        </div>
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="tag is-link">
+        2021
+        </h3>
+        <div class="timeline">
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2021/04/08/Machine learning linear algorithm/#more">阅读更多</a>
+            <article class="media">
+                
+                <a href="/2021/04/08/Machine learning linear algorithm/" class="media-left">
+                    <p class="image is-64x64">
+                        <img class="thumbnail" src="/images/2021.4.8.jpg" alt="线性回归与逻辑回归">
+                    </p>
+                </a>
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2021-04-08T05:41:07.000Z">2021-04-08</time>
+                        <a href="/2021/04/08/Machine learning linear algorithm/" class="has-link-black-ter is-size-6">线性回归与逻辑回归</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/code/">code</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </article>
+        
         </div>
-        
-        
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/10/12/Python/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2020.11.13.jpg" alt="Python">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-10-12T01:01:35.000Z">2020-10-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    21 分钟 读完 (大约 3160 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/10/12/Python/">Python</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="一-基础语法"><a href="#一-基础语法" class="headerlink" title="一.基础语法"></a>一.基础语法</h2><p>注意:python使用时需要严格缩进，否则在执行是会出现报错</p>
-<h3 id="1-注释"><a href="#1-注释" class="headerlink" title="1.注释"></a>1.注释</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 这里是一个注释嗷！</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-打印"><a href="#2-打印" class="headerlink" title="2.打印"></a>2.打印</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">print</span> (<span class="hljs-string">'hello word!'</span>)</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/10/12/Python/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/09/14/How to configure the Java Web compilation environment/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2020.9.14.jpg" alt="How to configure the Java Web compilation environment">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-09-14T11:32:00.000Z">2020-09-14</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Tutorials/">Tutorials</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 431 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/09/14/How to configure the Java Web compilation environment/">How to configure the Java Web compilation environment</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="一-安装JDK-配置环境变量"><a href="#一-安装JDK-配置环境变量" class="headerlink" title="一.安装JDK(配置环境变量)"></a>一.安装JDK(配置环境变量)</h3><p>配置java环境中已有详细介绍，这里将不做赘述。</p>
-<p>传送门链接:</p>
-<p><code>https://xiaotufly.github.io/2020/03/05/How%20to%20configure%20the%20JAVA%20compilation%20environment/</code></p>
-<h3 id="二-安装-elipse-Java-EE"><a href="#二-安装-elipse-Java-EE" class="headerlink" title="二.安装 elipse Java EE"></a>二.安装 elipse Java EE</h3><p>这里建立在已经装配elipse 的情况下。</p>
-<h5 id="1-打开elipse-gt-Help-gt-About-Eclipse-IDE-（查看版本号）"><a href="#1-打开elipse-gt-Help-gt-About-Eclipse-IDE-（查看版本号）" class="headerlink" title="1.打开elipse-&gt;Help-&gt;About Eclipse IDE （查看版本号）"></a>1.打开elipse-&gt;Help-&gt;About Eclipse IDE （查看版本号）</h5><p><img src="https://s1.ax1x.com/2020/09/14/wrrn9U.png" alt></p>
-<p>可得到版本号: 2019-12（每个人版本号不同）</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/09/14/How to configure the Java Web compilation environment/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/03/05/How to configure the Java compilation environment/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2020.3.5.jpg" alt="How to configure the Java compilation environment">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-05T13:13:53.000Z">2020-03-05</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Tutorials/">Tutorials</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 526 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/03/05/How to configure the Java compilation environment/">How to configure the Java compilation environment</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="1-下载JDK"><a href="#1-下载JDK" class="headerlink" title="1.下载JDK"></a>1.下载JDK</h2><p>官方下载网页：<a href="https://www.oracle.com/index.html" target="_blank" rel="noopener">https://www.oracle.com/index.html</a> </p>
-<p>进入网页后在框中输入“java”</p>
-<p><img src="https://s2.ax1x.com/2020/03/05/3HNiwj.png" alt></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/03/05/How to configure the Java compilation environment/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/12/10/Sort/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.12.10.jpg" alt="Merge Sort / Quickly Sort / Shell Sort">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-10T06:28:42.000Z">2019-12-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/code/c/">c++</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 694 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/12/10/Sort/">Merge Sort / Quickly Sort / Shell Sort</a>
-            
-        </h1>
-        <div class="content">
-            <p>这次我们介绍三种排序手写方法：Merge Sort、Quickly Sort 、Shell Sort.</p>
-<p>本文排序都使用的字符串组。</p>
-<h4 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h4><p>Merge Sort 也称为归并排序，算法如下：</p>
-<p>归并排序是将两个已经处理好的上升序列整合在一起成为一个新的上升序列。</p>
-<p>算法：将两个序列从左到右依次对比比较，分别设定两个序列的头尾指向，对比此时下标两个序列相对应的数字，小的则放入整合序列中，更新下标，若相等，则任意一个放入整合序列中，若其中一个序列已经放完，则按照顺序将另一个序列全部放入整合序列中。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/12/10/Sort/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/11/17/tree/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.11.17.jpg" alt="Binary Tree Calculator">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-17T11:44:45.000Z">2019-11-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/code/c/">c++</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    10 分钟 读完 (大约 1560 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/17/tree/">Binary Tree Calculator</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="1-基本思路"><a href="#1-基本思路" class="headerlink" title="1.基本思路"></a>1.基本思路</h4><p>​    Binary tree calculator也就是使用二叉树实现计算器的功能，相信大家以前都使用栈实现过计算器功的能，使用两个栈分别存数字与字符，一边计算一边“pop”、“push”，或是先将输入的中缀表达式转为后缀表达式，之后运算。而我们的Binary tree calculator则也需要用到栈，先将中缀表达式转为后缀表达式，之后使用指针栈构建Expression tree，再利用二叉树节点之间的关系递推遍历计算即可。</p>
-<h4 id="2-中缀表达式转后缀表达式"><a href="#2-中缀表达式转后缀表达式" class="headerlink" title="2.中缀表达式转后缀表达式"></a>2.中缀表达式转后缀表达式</h4><p>那么怎么才能将中缀表达式转为后缀表达式呢？我们来看下面一个例子。</p>
-<p>​                                                            <code>a+b*(c-d)/e</code></p>
-<p>上述则为一个中缀表达式，它的后缀表达式如下：</p>
-<p>​                                                          <code>abcd-*e/+</code></p>
-<p>我们利用栈来实现这个过程：</p>
-<p>(1)若遇到数字直接输出。</p>
-<p>(2)若遇到字符(‘+’、’-‘、’*’、’/‘),对比栈顶元素的优先级，如果比栈顶元素优先级高，则直接入栈，否则将栈中元素不断出栈，直到出现优先级比存入字符低，则将字符入栈。</p>
-<p>(3)若字符为’(‘,则直接入栈，若遇到‘)’，则将‘(’前的元素弹出。</p>
-<p>(4)若扫描完成后栈中还有元素滞留，则将栈中元素全部弹出。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/17/tree/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/11/03/List/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.11.6.jpg" alt="Double Linked List">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-03T13:52:50.000Z">2019-11-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/code/c/">c++</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    9 分钟 读完 (大约 1351 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/03/List/">Double Linked List</a>
-            
-        </h1>
-        <div class="content">
-            <h5 id="1-为什么要用链表"><a href="#1-为什么要用链表" class="headerlink" title="1.为什么要用链表"></a>1.为什么要用链表</h5><p>大家在存储多组数据时，会选用数组，但在数组中间删减或是增加数据时，需要将整个数组往前后“平移”。</p>
-<p>增加：</p>
-<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> size)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = index, i &lt;= size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i+<span class="hljs-number">1</span>] = a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	a[index] = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>删减：</p>
-<figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> size)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = index, i &lt;= size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i] = a[i+<span class="hljs-number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这样的时间复杂度会很高，也十分麻烦，需要遍历一遍才能完成操作，而链表可以之前在中间插入、删除。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/03/List/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/07/23/Snake/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.7.23.jpg" alt="Snake">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-23T14:44:38.000Z">2019-07-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/code/c/">c++</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6 分钟 读完 (大约 825 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/23/Snake/">Snake</a>
-            
-        </h1>
-        <div class="content">
-            <p><img src="https://ftp.bmp.ovh/imgs/2019/11/57246b8ce3ef7c28.png" alt="snake"></p>
-<p>学年设计的时候做的贪吃蛇，只是简单的做出来基本操作，写的代码从时间和空间上看都不是很优。</p>
-<p>这里讲一下大概思路：</p>
-<p>一条蛇不停的移动， 玩家将控制蛇的方向，蛇在吃掉食物后，将会重新生成食物，若蛇吃到自己的身体或撞到边框则结束游戏并显示得分。</p>
-<p>一个最简贪吃蛇游戏需要3个部分：</p>
-<p>1.地图</p>
-<p>2.蛇移动</p>
-<p>3.食物</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/07/23/Snake/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/07/11/first/" class="image is-7by1">
-            <img class="thumbnail" src="/images/2019.7.11.jpeg" alt="HELLO WORLD">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-11T14:24:16.000Z">2019-07-11</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/code/">code</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/code/c/">c++</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 11 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/11/first/">HELLO WORLD</a>
-            
-        </h1>
-        <div class="content">
-            <figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"HELLO WORLD"</span>;</span><br><span class="line">	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
